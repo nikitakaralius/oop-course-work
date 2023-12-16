@@ -17,9 +17,7 @@ public:
     DateTime createdAt() override;
 
 private:
-    std::string _name;
-    long long _size;
-    time_t _createdAt;
+    std::string path;
 };
 
 
