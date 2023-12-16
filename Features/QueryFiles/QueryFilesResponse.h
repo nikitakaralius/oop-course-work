@@ -19,6 +19,8 @@ public:
             delete file;
     }
 
+    std::vector<FileEntry*> getFiles() const { return files; }
+
     std::string toString() override {
         std::stringstream ss;
         for (const auto file : files) {
