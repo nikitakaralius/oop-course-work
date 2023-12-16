@@ -5,12 +5,18 @@
 #ifndef COUNTTOTALSIZEREQUESTHANDLER_H
 #define COUNTTOTALSIZEREQUESTHANDLER_H
 
+#include "CountTotalSizeRequest.h"
+#include "CountTotalSizeResponse.h"
+#include "../../CQRS/Abstractions/IGenericRequestHandler.h"
 
 
-class CountTotalSizeRequestHandler {
-
+class CountTotalSizeRequestHandler :
+        public IGenericRequestHandler<
+            CountTotalSizeRequest,
+            CountTotalSizeResponse> {
+public:
+    CountTotalSizeResponse* handleRequest(const CountTotalSizeRequest& request) override;
 };
-
 
 
 #endif //COUNTTOTALSIZEREQUESTHANDLER_H
