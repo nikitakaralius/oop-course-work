@@ -8,6 +8,7 @@
 #include "../../../Features/CountDirectories/CountDirectoriesRequest.h"
 #include "../../../Features/CountFiles/CountFilesRequest.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequest.h"
+#include "../../../Features/LargestFiles/LargestFilesRequest.h"
 #include "../../Abstractions/IUserInteractor.h"
 
 
@@ -23,6 +24,7 @@ private:
     CountDirectoriesRequest* readCountDirectoriesRequest();
     CountFilesRequest* readCountFilesRequest();
     CountTotalSizeRequest* readCountTotalSizeRequest();
+    LargestFilesRequest* readLargestFilesRequest();
 };
 
 
