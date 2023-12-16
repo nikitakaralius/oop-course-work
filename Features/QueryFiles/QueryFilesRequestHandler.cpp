@@ -28,7 +28,7 @@ std::vector<FileEntry*> QueryFilesRequestHandler::getFiles(
     auto subdirectories = directory.subdirectories();
 
     if (subdirectories.empty())
-        return {};
+        return files;
 
     for (const auto subdirectory : subdirectories) {
         auto subdirectoryFiles = getFiles(
