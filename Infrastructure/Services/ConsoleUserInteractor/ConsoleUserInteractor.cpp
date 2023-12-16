@@ -7,8 +7,7 @@
 #include <iostream>
 
 bool ConsoleUserInteractor::shouldExit() {
-    shouldExit_ = !shouldExit_;
-    return shouldExit_;
+    return false;
 }
 
 IRequest* ConsoleUserInteractor::readRequest() {

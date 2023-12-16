@@ -4,6 +4,13 @@
 
 #include "ApplicationRequestRouter.h"
 
+#include "../../../Features/Mock/MockRequest.h"
+#include "../../../Features/Mock/MockRequestHandler.h"
+
 IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
+    if (dynamic_cast<MockRequest*>(&request)) {
+        return new MockRequestHandler();
+    }
+
     throw std::runtime_error("not yet implemeted");
 }
