@@ -7,6 +7,6 @@
 
 #include "IStringFormattable.h"
 
-class IRequest : IStringFormattable { };
+class IRequest : public IStringFormattable { };
 
 #endif //IREQUEST_H

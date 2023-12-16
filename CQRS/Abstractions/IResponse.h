@@ -7,6 +7,6 @@
 
 #include "IStringFormattable.h"
 
-class IResponse : IStringFormattable { };
+class IResponse : public IStringFormattable { };
 
 #endif //IRESPONSE_H

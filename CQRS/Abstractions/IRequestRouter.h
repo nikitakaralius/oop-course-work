@@ -6,14 +6,13 @@
 #define IREQUESTROUTER_H
 
 #include "IRequest.h"
-#include "IRequestHandler.h"
-#include "IResponse.h"
+#include "IGenericRequestHandler.h"
 
 class IRequestRouter {
 public:
     virtual ~IRequestRouter() = default;
 
-    virtual IRequestHandler<IRequest, IResponse>* getHandler(const IRequest& request) = 0;
+    virtual IRequestHandler* getHandler(IRequest& request) = 0;
 };
 
 #endif //IREQUESTROUTER_H
