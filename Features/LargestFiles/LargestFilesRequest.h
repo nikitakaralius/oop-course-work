@@ -4,16 +4,33 @@
 
 #ifndef LARGESTFILESREQUEST_H
 #define LARGESTFILESREQUEST_H
-#include "../../CQRS/Abstractions/IRequest.h"
 
-class LargestFilesRequest final : public IRequest {
+
+#include "../Common/FilesRequest.h"
+
+class LargestFilesRequest final : public FilesRequest {
 public:
-    std::string toString() override {
+    LargestFilesRequest(
+        const std::string&directoryPath,
+        int maxDepthLevel,
+        long long sizeThreshold)
+        : FilesRequest(directoryPath, maxDepthLevel),
+          sizeThreshold(sizeThreshold) { }
 
-    }
+    long long getSizeThreshold() const { return sizeThreshold; }
+
+    std::string toString() override {
+        std::stringstream ss;
+
+        ss
+        << "Самые болишие файлы в "
+        << getDirectoryPath() << " "
+        << getMaxDepthLevelDesription();
+
+        return ss.str();
+    };
 
 private:
-    std::string directoryPath;
     long long sizeThreshold;
 };
 

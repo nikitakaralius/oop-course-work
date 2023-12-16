@@ -5,10 +5,17 @@
 #ifndef LARGESTFILESREQUESTHANDLER_H
 #define LARGESTFILESREQUESTHANDLER_H
 
+#include "LargestFilesRequest.h"
+#include "LargestFilesResponse.h"
+#include "../Common/FilesRequestHandler.h"
 
 
-class LargestFilesRequestHandler {
-
+class LargestFilesRequestHandler :
+        public FilesRequestHandler<
+            LargestFilesRequest,
+            LargestFilesResponse> {
+public:
+    LargestFilesResponse* handleRequest(const LargestFilesRequest& request) override;
 };
 
 
