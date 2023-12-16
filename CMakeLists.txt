@@ -66,10 +66,6 @@ add_executable(FileWizard main.cpp
         Features/NewestFiles/NewestFilesResponse.h
         Features/NewestFiles/NewestFilesRequestHandler.cpp
         Features/NewestFiles/NewestFilesRequestHandler.h
-        Features/OldestFiles/OldestFilesRequest.h
-        Features/OldestFiles/OldestFilesResponse.h
-        Features/OldestFiles/OldestFilesRequestHandler.cpp
-        Features/OldestFiles/OldestFilesRequestHandler.h
         Features/LargestFiles/LargestFilesRequest.h
         Features/LargestFiles/LargestFilesResponse.h
         Features/LargestFiles/LargestFilesRequestHandler.cpp
