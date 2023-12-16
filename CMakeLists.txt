@@ -46,4 +46,9 @@ add_executable(FileWizard main.cpp
         FileSystem/Models/FileEntry/FileEntry.cpp
         FileSystem/Models/FileEntry/FileEntry.h
         FileSystem/Models/DateTime/DateTime.h
+        Features/CountDirectories/CountDirectoriesRequest.h
+        Features/CountDirectories/CountDirectoriesRequest.h
+        Features/CountDirectories/CountDirectoriesResponse.h
+        Features/CountDirectories/CountDirectoriesRequestHandler.cpp
+        Features/CountDirectories/CountDirectoriesRequestHandler.h
 )
