@@ -13,8 +13,6 @@ add_executable(FileWizard main.cpp
         CQRS/Abstractions/IResponse.h
         CQRS/Abstractions/IRequestSender.h
         CQRS/Abstractions/IRequestRouter.h
-        CQRS/Services/DefaultRequestRouter/DefaultRequestRouter.cpp
-        CQRS/Services/DefaultRequestRouter/DefaultRequestRouter.h
-        CQRS/Services/MockRequestHandler/MockRequestHandler.cpp
-        CQRS/Services/MockRequestHandler/MockRequestHandler.h
+        CQRS/Services/RequestHandler/RequestHandler.cpp
+        CQRS/Services/RequestHandler/RequestHandler.h
 )
