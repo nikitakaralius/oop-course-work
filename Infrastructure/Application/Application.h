@@ -4,7 +4,7 @@
 
 #ifndef APPLICATION_H
 #define APPLICATION_H
-#include "../../CQRS/MIddleware/MidlewarePipeline/MiddlewarePipeline.h"
+#include "../../CQRS/MIddleware/MiddlewarePipeline/MiddlewarePipeline.h"
 #include "../Abstractions/IUserInteractor.h"
 
 

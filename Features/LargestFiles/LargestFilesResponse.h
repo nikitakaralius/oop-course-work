@@ -9,7 +9,7 @@
 #include "../../CQRS/Abstractions/IResponse.h"
 #include "../../FileSystem/Models/FileEntry/FileEntry.h"
 
-class LargestFilesResponse final : IResponse {
+class LargestFilesResponse final : public IResponse {
 public:
     explicit LargestFilesResponse(std::vector<FileEntry*> largestFiles) : largestFiles(largestFiles) {  }
 
