@@ -4,7 +4,6 @@
 
 #ifndef IUSERINTERACTOR_H
 #define IUSERINTERACTOR_H
-#include "../../Features/Mock/MockRequest.h"
 
 class IUserInteractor {
 public:
