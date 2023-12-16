@@ -18,22 +18,25 @@ IRequest* ConsoleUserInteractor::readRequest() {
     << "2 - подсчет количества файлов" << "\n"
     << "3 - подсчет суммарного размера файлов" << "\n"
     << "4 - нахождение самых больших файлов" << "\n"
-    << "5 - нахождение самых новых файлов" << "\n";
+    << "5 - нахождение самых новых файлов" << "\n"
+    << "6 - нахождение дубликатов файлов" << "\n";
 
-    int queryNumber;
-    std::cin >> queryNumber;
+    char query;
+    std::cin >> query;
 
-    switch (queryNumber) {
-        case 1:
+    switch (query) {
+        case '1':
             return readCountDirectoriesRequest();
-        case 2:
+        case '2':
             return readCountFilesRequest();
-        case 3:
+        case '3':
             return readCountTotalSizeRequest();
-        case 4:
+        case '4':
             return readLargestFilesRequest();
-        case 5:
+        case '5':
             return readNewestFilesRequest();
+        case '6':
+            return readFindDuplicatesRequest();
         default:
             throw std::runtime_error("Неизвестная команда");
     }
@@ -142,4 +145,25 @@ NewestFilesRequest* ConsoleUserInteractor::readNewestFilesRequest() {
     }
 
     return new NewestFilesRequest(directoryPath, maxDepthLevel, timeThreshold);
+}
+
+FindDuplicatesRequest* ConsoleUserInteractor::readFindDuplicatesRequest() {
+    std::cout << "Введите путь к файлу, дубликат которого будем искать: " << std::endl;
+    std::string filePath;
+    std::cin >> filePath;
+
+    std::cout << "Введите путь к директории, где буем искать дубликат: " << std::endl;
+    std::string directoryPath;
+    std::cin >> directoryPath;
+
+    std::cout << "Введите желаемую глубину обхода (-1 для максимальной):" << std::endl;
+    int maxDepthLevel;
+    std::cin >> maxDepthLevel;
+
+    maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
+
+    if (maxDepthLevel <= 0)
+        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+
+    return new FindDuplicatesRequest(directoryPath, maxDepthLevel, filePath);
 }

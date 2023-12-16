@@ -8,6 +8,7 @@
 #include "../../../Features/CountDirectories/CountDirectoriesRequest.h"
 #include "../../../Features/CountFiles/CountFilesRequest.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequest.h"
+#include "../../../Features/FindDuplicates/FindDuplicatesRequest.h"
 #include "../../../Features/LargestFiles/LargestFilesRequest.h"
 #include "../../../Features/NewestFiles/NewestFilesRequest.h"
 #include "../../Abstractions/IUserInteractor.h"
@@ -29,6 +30,7 @@ private:
     CountTotalSizeRequest* readCountTotalSizeRequest();
     LargestFilesRequest* readLargestFilesRequest();
     NewestFilesRequest* readNewestFilesRequest();
+    FindDuplicatesRequest* readFindDuplicatesRequest();
 };
 
 
