@@ -7,13 +7,15 @@
 
 #include <string>
 
+#include "../Models/DateTime/DateTime.h"
+
 class IFileSystemEntry {
 public:
     virtual ~IFileSystemEntry() = default;
 
     virtual std::string name() = 0;
     virtual long long size() = 0;
-    virtual time_t createdAt() = 0;
+    virtual DateTime createdAt() = 0;
 };
 
 #endif //IFILESYSTEMENTRY_H

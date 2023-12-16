@@ -8,6 +8,7 @@
 #include <utility>
 
 #include "../../Abstractions/IFileSystemEntry.h"
+#include "../DateTime/DateTime.h"
 #include "../FileEntry/FileEntry.h"
 
 
@@ -17,10 +18,10 @@ public:
 
     std::string name() override;
     long long size() override;
-    time_t createdAt() override;
+    DateTime createdAt() override;
 
-    std::vector<DirectoryEntry> subdirectories(int level = 1);
-    std::vector<FileEntry> files(int level = 1);
+    std::vector<DirectoryEntry*>* subdirectories() const;
+    std::vector<FileEntry*>* files() const;
 
 private:
     std::string path;

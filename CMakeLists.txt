@@ -45,4 +45,5 @@ add_executable(FileWizard main.cpp
         FileSystem/Models/DirectoryEntry/DirectoryEntry.h
         FileSystem/Models/FileEntry/FileEntry.cpp
         FileSystem/Models/FileEntry/FileEntry.h
+        FileSystem/Models/DateTime/DateTime.h
 )
