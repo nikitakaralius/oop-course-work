@@ -7,8 +7,10 @@
 #include <iomanip>
 #include <iostream>
 
+#include "../../../Features/Exit/ExitRequest.h"
+
 bool ConsoleUserInteractor::shouldExit() {
-    return false;
+    return shouldExit_;
 }
 
 IRequest* ConsoleUserInteractor::readRequest() {
@@ -19,7 +21,8 @@ IRequest* ConsoleUserInteractor::readRequest() {
     << "3 - подсчет суммарного размера файлов" << "\n"
     << "4 - нахождение самых больших файлов" << "\n"
     << "5 - нахождение самых новых файлов" << "\n"
-    << "6 - нахождение дубликатов файлов" << "\n";
+    << "6 - нахождение дубликатов файлов" << "\n"
+    << "e - выход" << "\n";
 
     char query;
     std::cin >> query;
@@ -37,6 +40,9 @@ IRequest* ConsoleUserInteractor::readRequest() {
             return readNewestFilesRequest();
         case '6':
             return readFindDuplicatesRequest();
+        case 'e':
+            shouldExit_ = true;
+            return new ExitRequest();
         default:
             throw std::runtime_error("Неизвестная команда");
     }

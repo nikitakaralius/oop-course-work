@@ -10,6 +10,8 @@
 #include "../../../Features/CountFiles/CountFilesRequestHandler.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequest.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequestHandler.h"
+#include "../../../Features/Exit/ExitRequest.h"
+#include "../../../Features/Exit/ExitRequestHandler.h"
 #include "../../../Features/FindDuplicates/FindDuplicatesRequest.h"
 #include "../../../Features/FindDuplicates/FindDuplicatesRequestHandler.h"
 #include "../../../Features/LargestFiles/LargestFilesRequest.h"
@@ -35,6 +37,9 @@ IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
 
     if (dynamic_cast<FindDuplicatesRequest*>(&request))
         return new FindDuplicatesRequestHandler;
+
+    if (dynamic_cast<ExitRequest*>(&request))
+        return new ExitRequestHandler;
 
     throw std::runtime_error("not yet implemeted");
 }

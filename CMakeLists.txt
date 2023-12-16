@@ -41,7 +41,6 @@ add_executable(FileWizard main.cpp
         FileSystem/Models/DirectoryEntry/DirectoryEntry.h
         FileSystem/Models/FileEntry/FileEntry.cpp
         FileSystem/Models/FileEntry/FileEntry.h
-        FileSystem/Models/DateTime/DateTime.h
         Features/CountDirectories/CountDirectoriesRequest.h
         Features/CountDirectories/CountDirectoriesRequest.h
         Features/CountDirectories/CountDirectoriesResponse.h
@@ -72,4 +71,8 @@ add_executable(FileWizard main.cpp
         Features/LargestFiles/LargestFilesRequestHandler.h
         Features/Common/FilesRequest.h
         Features/Common/FilesRequestHandler.h
+        Features/Exit/ExitRequest.h
+        Features/Exit/ExitRequest.h
+        Features/Exit/ExitResponse.h
+        Features/Exit/ExitRequestHandler.h
 )

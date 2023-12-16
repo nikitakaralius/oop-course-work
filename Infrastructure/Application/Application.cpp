@@ -13,9 +13,9 @@ Application::Application(
 }
 
 Application::~Application() {
-    delete middlewarePipeline;
     delete requestHandler;
     delete userInteractor;
+    delete middlewarePipeline;
 }
 
 void Application::use(IMiddleware* middleware) const {
