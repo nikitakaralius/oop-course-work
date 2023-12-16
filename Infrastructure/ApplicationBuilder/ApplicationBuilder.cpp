@@ -4,12 +4,12 @@
 
 #include "ApplicationBuilder.h"
 
-ApplicationBuilder& ApplicationBuilder::addRequestRouter(IRequestRouter* requestRouter) {
+ApplicationBuilder ApplicationBuilder::addRequestRouter(IRequestRouter* requestRouter) {
     this->requestRouter = requestRouter;
     return *this;
 }
 
-ApplicationBuilder& ApplicationBuilder::addUserInteractor(IUserInteractor* userInteractor) {
+ApplicationBuilder ApplicationBuilder::addUserInteractor(IUserInteractor* userInteractor) {
     this->userInteractor = userInteractor;
     return *this;
 }

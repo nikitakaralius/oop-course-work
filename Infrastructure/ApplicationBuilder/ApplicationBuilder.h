@@ -15,11 +15,11 @@ private:
     IUserInteractor* userInteractor;
 
 public:
-    static ApplicationBuilder& create() { return *new ApplicationBuilder(); }
+    static ApplicationBuilder create() { return {}; }
 
-    ApplicationBuilder& addRequestRouter(IRequestRouter* requestRouter);
+    ApplicationBuilder addRequestRouter(IRequestRouter* requestRouter);
 
-    ApplicationBuilder& addUserInteractor(IUserInteractor* userInteractor);
+    ApplicationBuilder addUserInteractor(IUserInteractor* userInteractor);
 
     Application* build();
 };
