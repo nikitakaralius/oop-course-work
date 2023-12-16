@@ -1,3 +1,4 @@
+#include "FileSystem/Models/DirectoryEntry/DirectoryEntry.h"
 #include "Infrastructure/ApplicationBuilder/ApplicationBuilder.h"
 #include "Infrastructure/MIddleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h"
 #include "Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.h"
@@ -5,6 +6,13 @@
 
 
 int main() {
+    auto directory = DirectoryEntry("/Users/nikitakaralyus/Wallpaper");
+    auto files = directory.files();
+    auto subdirectories = directory.subdirectories();
+    auto createdAt = directory.createdAt();
+    auto size = directory.size();
+    auto name = directory.name();
+
     const auto app = ApplicationBuilder::create()
             .addRequestRouter(new ApplicationRequestRouter)
             .addUserInteractor(new ConsoleUserInteractor)

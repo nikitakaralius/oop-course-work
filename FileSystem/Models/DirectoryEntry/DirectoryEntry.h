@@ -6,10 +6,13 @@
 #define DIRECTORYENTRY_H
 
 #include <utility>
+#include <__filesystem/path.h>
 
 #include "../../Abstractions/IFileSystemEntry.h"
 #include "../DateTime/DateTime.h"
 #include "../FileEntry/FileEntry.h"
+
+namespace fs = std::filesystem;
 
 
 class DirectoryEntry final : public IFileSystemEntry {
@@ -25,6 +28,8 @@ public:
 
 private:
     std::string path;
+
+    long long size(const fs::path& directoryPath) const;
 };
 
 
