@@ -16,6 +16,8 @@ public:
     long long size() override;
     time_t createdAt() override;
 
+    std::string getPath() const { return path;}
+
 private:
     std::string path;
 };

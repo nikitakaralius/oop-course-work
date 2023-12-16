@@ -22,7 +22,7 @@ public:
         std::stringstream ss;
 
         ss
-        << "Самые новые файлв в "
+        << "Поиск самых новых файлов в "
         << getDirectoryPath() << " "
         << getMaxDepthLevelDesription();
 

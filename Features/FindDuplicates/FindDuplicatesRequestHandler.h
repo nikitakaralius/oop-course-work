@@ -5,10 +5,17 @@
 #ifndef FINDDUPLICATESREQUESTHANDLER_H
 #define FINDDUPLICATESREQUESTHANDLER_H
 
+#include "FindDuplicatesRequest.h"
+#include "FindDuplicatesResponse.h"
+#include "../Common/FilesRequestHandler.h"
 
 
-class FindDuplicatesRequestHandler {
-
+class FindDuplicatesRequestHandler :
+        public FilesRequestHandler<
+            FindDuplicatesRequest,
+            FindDuplicatesResponse> {
+public:
+    FindDuplicatesResponse* handleRequest(const FindDuplicatesRequest& request) override;
 };
 
 
