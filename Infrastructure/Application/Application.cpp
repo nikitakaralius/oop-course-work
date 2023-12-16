@@ -4,14 +4,18 @@
 
 #include "Application.h"
 
-Application::Application(RequestHandler* requestHandler) {
+Application::Application(
+    RequestHandler* requestHandler,
+    IUserInteractor* userInteractor) {
     this->requestHandler = requestHandler;
+    this->userInteractor = userInteractor;
     middlewarePipeline = new MiddlewarePipeline(requestHandler);
 }
 
 Application::~Application() {
     delete middlewarePipeline;
     delete requestHandler;
+    delete userInteractor;
 }
 
 void Application::use(IMiddleware* middleware) const {
@@ -19,5 +23,7 @@ void Application::use(IMiddleware* middleware) const {
 }
 
 void Application::run() const {
-
+    while (!userInteractor->shouldExit()) {
+        
+    }
 }

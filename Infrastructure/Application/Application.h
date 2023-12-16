@@ -5,11 +5,14 @@
 #ifndef APPLICATION_H
 #define APPLICATION_H
 #include "../../CQRS/MIddleware/MidlewarePipeline/MiddlewarePipeline.h"
+#include "../Abstractions/IUserInteractor.h"
 
 
 class Application {
 public:
-    explicit Application(RequestHandler* requestHandler);
+    explicit Application(
+        RequestHandler* requestHandler,
+        IUserInteractor* userInteractor);
 
     ~Application();
 
@@ -20,6 +23,7 @@ public:
 private:
     MiddlewarePipeline* middlewarePipeline;
     RequestHandler* requestHandler;
+    IUserInteractor* userInteractor;
 };
 
 
