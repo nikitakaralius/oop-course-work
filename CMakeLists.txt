@@ -3,4 +3,9 @@ project(FileWizard)
 
 set(CMAKE_CXX_STANDARD 23)
 
-add_executable(FileWizard main.cpp)
+add_executable(FileWizard main.cpp
+        Abstractions/IStringFormattable.h
+        Abstractions/IRequest.h
+        Abstractions/IResponse.h
+        Abstractions/IMiddleware.h
+        Include/Aliases.h)
