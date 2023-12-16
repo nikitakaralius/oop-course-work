@@ -5,16 +5,26 @@
 #ifndef NEWESTFILESRESPONSE_H
 #define NEWESTFILESRESPONSE_H
 
+#include <sstream>
+
 #include "../../CQRS/Abstractions/IResponse.h"
+#include "../../FileSystem/Models/FileEntry/FileEntry.h"
 
 class FileEntry;
 
-class NewestFilesResponse final : IResponse {
+class NewestFilesResponse final : public IResponse {
 public:
-    NewestFilesResponse(std::vector<FileEntry*> newestFiles) : newestFiles(newestFiles) {  }
+    explicit NewestFilesResponse(std::vector<FileEntry*> newestFiles) : newestFiles(newestFiles) {  }
 
     std::string toString() override {
+        std::stringstream ss;
 
+        for (const auto file : newestFiles) {
+            time_t createdAt = file->createdAt();
+            ss << file->name() << " - " << std::ctime(&createdAt) << "\n";
+        }
+
+        return ss.str();
     };
 
 private:

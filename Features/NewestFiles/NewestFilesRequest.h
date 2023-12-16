@@ -7,7 +7,7 @@
 
 #include "../Common/FilesRequest.h"
 
-class NewestFilesRequest : FilesRequest {
+class NewestFilesRequest : public FilesRequest {
 public:
     NewestFilesRequest(
         const std::string& directoryPath,
@@ -17,6 +17,17 @@ public:
           timeThreshold(time_threshold) { }
 
     time_t getTimeThreshold() const { return timeThreshold; }
+
+    std::string toString() override {
+        std::stringstream ss;
+
+        ss
+        << "Самые новые файлв в "
+        << getDirectoryPath() << " "
+        << getMaxDepthLevelDesription();
+
+        return ss.str();
+    };
 
 private:
     time_t timeThreshold;

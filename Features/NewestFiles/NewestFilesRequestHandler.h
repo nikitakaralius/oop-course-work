@@ -4,11 +4,17 @@
 
 #ifndef NEWESTFILESREQUESTHANDLER_H
 #define NEWESTFILESREQUESTHANDLER_H
+#include "NewestFilesRequest.h"
+#include "NewestFilesResponse.h"
+#include "../Common/FilesRequestHandler.h"
 
 
-
-class NewestFilesRequestHandler {
-
+class NewestFilesRequestHandler :
+        public FilesRequestHandler<
+            NewestFilesRequest,
+            NewestFilesResponse> {
+public:
+    NewestFilesResponse* handleRequest(const NewestFilesRequest& request) override;
 };
 
 
