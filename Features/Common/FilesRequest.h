@@ -11,10 +11,10 @@
 class FilesRequest : public IRequest {
 public:
     explicit FilesRequest(
-        int maxDepthLevel,
-        std::string directoryPath)
-        : maxDepthLevel(maxDepthLevel),
-          directoryPath(std::move(directoryPath)) { }
+        std::string directoryPath,
+        int maxDepthLevel)
+        : directoryPath(std::move(directoryPath)),
+          maxDepthLevel(maxDepthLevel) { }
 
     std::string getDirectoryPath() const { return directoryPath; }
 

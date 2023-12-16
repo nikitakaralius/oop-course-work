@@ -6,37 +6,23 @@
 #define COUNTTOTALSIZEREQUEST_H
 
 #include <sstream>
-#include "../../CQRS/Abstractions/IRequest.h"
+#include "../Common/FilesRequest.h"
 
-class CountTotalSizeRequest : public IRequest {
+class CountTotalSizeRequest final : public FilesRequest {
 public:
-    CountTotalSizeRequest(std::string directoryPath, int maxDepthLevel)
-        : directoryPath(std::move(directoryPath)),
-          maxDepthLevel(maxDepthLevel) {
-    }
-
-    std::string getDirectoryPath() const { return directoryPath; }
-
-    int getMaxDepthLevel() const { return maxDepthLevel; }
+    CountTotalSizeRequest(const std::string& directoryPath, int maxDepthLevel)
+        : FilesRequest(directoryPath, maxDepthLevel) { }
 
     std::string toString() override {
         std::stringstream ss;
 
         ss
         << "Подсчет суммарного размера файлов в "
-        << directoryPath;
-
-        if (maxDepthLevel == INT_MAX)
-            ss << " c максимальной глубиной обхода";
-        else
-            ss << " с глубиной обхода = " << maxDepthLevel;
+        << getDirectoryPath()
+        << getMaxDepthLevelDesription();
 
         return ss.str();
     }
-
-private:
-    std::string directoryPath;
-    int maxDepthLevel;
 };
 
 

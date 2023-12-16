@@ -7,15 +7,15 @@
 
 #include "CountFilesRequest.h"
 #include "CountFilesResponse.h"
-#include "../../CQRS/Abstractions/IGenericRequestHandler.h"
+#include "../Common/FilesRequestHandler.h"
 
 
 class CountFilesRequestHandler :
-        public IGenericRequestHandler<
+        public FilesRequestHandler<
             CountFilesRequest,
             CountFilesResponse> {
 public:
-    CountFilesResponse* handleRequest(const CountFilesRequest& request) override;
+    CountFilesResponse* handleRequest(const CountFilesRequest&request) override;
 };
 
 

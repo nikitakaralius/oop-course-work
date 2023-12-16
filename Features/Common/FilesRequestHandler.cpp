@@ -5,6 +5,12 @@
 #include "FilesRequestHandler.h"
 
 template<class TRequest, class TResponse>
+std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::getFiles(const FilesRequest& request) const {
+    auto rootDirectory = DirectoryEntry(request.getDirectoryPath());
+    return getFiles(rootDirectory, 1, request.getMaxDepthLevel());
+}
+
+template<class TRequest, class TResponse>
 std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::getFiles(
     const DirectoryEntry& directory,
     int currentDepthLevel,

@@ -7,11 +7,11 @@
 
 #include "CountTotalSizeRequest.h"
 #include "CountTotalSizeResponse.h"
-#include "../../CQRS/Abstractions/IGenericRequestHandler.h"
+#include "../Common/FilesRequestHandler.h"
 
 
 class CountTotalSizeRequestHandler :
-        public IGenericRequestHandler<
+        public FilesRequestHandler<
             CountTotalSizeRequest,
             CountTotalSizeResponse> {
 public:

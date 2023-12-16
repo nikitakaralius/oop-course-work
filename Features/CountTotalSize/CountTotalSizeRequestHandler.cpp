@@ -3,16 +3,10 @@
 //
 
 #include "CountTotalSizeRequestHandler.h"
-#include "../QueryFiles/QueryFilesRequestHandler.h"
-
 #include <numeric>
 
 CountTotalSizeResponse* CountTotalSizeRequestHandler::handleRequest(const CountTotalSizeRequest& request) {
-    auto queryFilesHandler = QueryFilesRequestHandler();
-    auto query = QueryFilesRequest(request.getMaxDepthLevel(), request.getDirectoryPath());
-    auto queryFilesResponse = queryFilesHandler.handleRequest(query);
-
-    auto files = queryFilesResponse->getFiles();
+    auto files = getFiles(request);
 
     const auto totalSize = std::accumulate(
     files.begin(),
@@ -21,8 +15,6 @@ CountTotalSizeResponse* CountTotalSizeRequestHandler::handleRequest(const CountT
     [](long long totalSize, FileEntry* file) {
         return totalSize + file->size();
     });
-
-    delete queryFilesResponse;
 
     return new CountTotalSizeResponse(totalSize);
 }

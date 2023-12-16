@@ -70,14 +70,6 @@ add_executable(FileWizard main.cpp
         Features/OldestFiles/OldestFilesResponse.h
         Features/OldestFiles/OldestFilesRequestHandler.cpp
         Features/OldestFiles/OldestFilesRequestHandler.h
-        Features/QueryDirectories/QueryFilesRequest.h
-        Features/QueryDirectories/QueryFilesResponse.h
-        Features/QueryDirectories/QueryFilesRequestHandler.cpp
-        Features/QueryDirectories/QueryFilesRequestHandler.h
-        Features/QueryFiles/QueryFilesRequest.h
-        Features/QueryFiles/QueryFilesResponse.h
-        Features/QueryFiles/QueryFilesRequestHandler.cpp
-        Features/QueryFiles/QueryFilesRequestHandler.h
         Features/LargestFiles/LargestFilesRequest.h
         Features/LargestFiles/LargestFilesResponse.h
         Features/LargestFiles/LargestFilesRequestHandler.cpp

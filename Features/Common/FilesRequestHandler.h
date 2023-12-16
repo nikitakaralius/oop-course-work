@@ -5,12 +5,16 @@
 #ifndef FILESREQUESTHANDLER_H
 #define FILESREQUESTHANDLER_H
 
+#include "FilesRequest.h"
 #include "../../CQRS/Abstractions/IGenericRequestHandler.h"
 #include "../../FileSystem/Models/DirectoryEntry/DirectoryEntry.h"
 
 template<class TRequest, class TResponse>
 class FilesRequestHandler :  public IGenericRequestHandler<TRequest, TResponse> {
 protected:
+    std::vector<FileEntry*> getFiles(const FilesRequest& request) const;
+
+private:
     std::vector<FileEntry*> getFiles(
         const DirectoryEntry& directory,
         int currentDepthLevel,
