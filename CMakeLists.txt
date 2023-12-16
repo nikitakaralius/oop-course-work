@@ -32,4 +32,7 @@ add_executable(FileWizard main.cpp
         Infrastructure/ApplicationBuilder/ApplicationBuilder.h
         Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.cpp
         Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.h
+        Infrastructure/Abstractions/IUserInteractor.h
+        Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.cpp
+        Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.h
 )
