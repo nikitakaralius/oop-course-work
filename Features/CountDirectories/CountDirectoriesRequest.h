@@ -27,7 +27,7 @@ public:
             ss << " с глубиной обхода = " << depthLevel;
 
         return ss.str();
-    };
+    }
 
     std::string getDirectoryPath() const { return directoryPath; }
     int getDepthLevel() const { return depthLevel; }

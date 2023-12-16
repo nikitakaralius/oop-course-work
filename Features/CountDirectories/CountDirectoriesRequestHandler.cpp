@@ -24,10 +24,11 @@ int CountDirectoriesRequestHandler::countDirectories(DirectoryEntry& entry, int 
     if (currrentLevel > maxLevel)
         return 0;
 
-    if (entry.subdirectories().empty())
+    auto subdirectories = entry.subdirectories();
+
+    if (subdirectories.empty())
         return 0;
 
-    auto subdirectories = entry.subdirectories();
     int count = subdirectories.size();
 
     for (auto subdirectory : subdirectories) {
