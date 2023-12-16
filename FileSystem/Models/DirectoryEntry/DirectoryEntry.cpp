@@ -4,6 +4,7 @@
 
 #include "DirectoryEntry.h"
 #include <__filesystem/directory_iterator.h>
+
 #include <filesystem>
 
 namespace fs = std::filesystem;
@@ -16,9 +17,9 @@ long long DirectoryEntry::size() {
     return size(path);
 }
 
-DateTime DirectoryEntry::createdAt() {
-    auto lastWriteTime = fs::last_write_time(path);
-    return DateTime(lastWriteTime.time_since_epoch().count());
+time_t DirectoryEntry::createdAt() {
+    fs::file_time_type lastWriteTime = fs::last_write_time(path);
+    return to_time_t(lastWriteTime);
 }
 
 std::vector<DirectoryEntry*> DirectoryEntry::subdirectories() const {

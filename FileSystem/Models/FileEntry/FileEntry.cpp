@@ -23,7 +23,7 @@ long long FileEntry::size() {
     return fs::file_size(path);
 }
 
-DateTime FileEntry::createdAt() {
+time_t FileEntry::createdAt() {
     auto lastWriteTime = fs::last_write_time(path);
-    return DateTime(lastWriteTime.time_since_epoch().count());
+    return to_time_t(lastWriteTime);
 }

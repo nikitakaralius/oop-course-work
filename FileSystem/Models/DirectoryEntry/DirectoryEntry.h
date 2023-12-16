@@ -9,7 +9,6 @@
 #include <__filesystem/path.h>
 
 #include "../../Abstractions/IFileSystemEntry.h"
-#include "../DateTime/DateTime.h"
 #include "../FileEntry/FileEntry.h"
 
 namespace fs = std::filesystem;
@@ -21,7 +20,7 @@ public:
 
     std::string name() override;
     long long size() override;
-    DateTime createdAt() override;
+    time_t createdAt() override;
 
     std::vector<DirectoryEntry*> subdirectories() const;
     std::vector<FileEntry*> files() const;

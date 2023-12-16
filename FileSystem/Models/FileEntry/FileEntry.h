@@ -14,7 +14,7 @@ public:
 
     std::string name() override;
     long long size() override;
-    DateTime createdAt() override;
+    time_t createdAt() override;
 
 private:
     std::string path;
