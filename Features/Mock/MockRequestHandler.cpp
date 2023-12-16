@@ -7,6 +7,6 @@
 #include <iostream>
 
 MockResponse* MockRequestHandler::handleRequest(const MockRequest& request) {
-    std::cout << "[Handler] Handling mock request";
+    std::cout << "[Handler] Handling mock request" << std::endl;
     return new MockResponse();
 }
