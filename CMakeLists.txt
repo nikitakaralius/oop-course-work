@@ -49,4 +49,5 @@ add_executable(FileWizard main.cpp
         Features/CountDirectories/CountDirectoriesRequestHandler.h
         Infrastructure/Services/FileLogger/FileLogger.cpp
         Infrastructure/Services/FileLogger/FileLogger.h
+        Infrastructure/MIddleware/FileLoggerMiddleware/FileLoggerMiddleware.h
 )
