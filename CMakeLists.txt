@@ -83,4 +83,6 @@ add_executable(FileWizard main.cpp
         Features/LargestFiles/LargestFilesRequestHandler.cpp
         Features/LargestFiles/LargestFilesRequestHandler.h
         Features/Common/FilesRequest.h
+        Features/Common/FilesRequestHandler.cpp
+        Features/Common/FilesRequestHandler.h
 )
