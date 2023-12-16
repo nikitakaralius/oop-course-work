@@ -30,4 +30,6 @@ add_executable(FileWizard main.cpp
         Infrastructure/Application/Application.h
         Infrastructure/ApplicationBuilder/ApplicationBuilder.cpp
         Infrastructure/ApplicationBuilder/ApplicationBuilder.h
+        Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.cpp
+        Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.h
 )
