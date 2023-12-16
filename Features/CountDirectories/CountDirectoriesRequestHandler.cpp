@@ -21,7 +21,7 @@ CountDirectoriesResponse* CountDirectoriesRequestHandler::handleRequest(const Co
 }
 
 int CountDirectoriesRequestHandler::countDirectories(DirectoryEntry& entry, int currrentLevel, int maxLevel) {
-    if (currrentLevel >= maxLevel)
+    if (currrentLevel > maxLevel)
         return 0;
 
     if (entry.subdirectories().empty())
