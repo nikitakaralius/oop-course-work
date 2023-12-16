@@ -12,6 +12,8 @@
 #include "../../../Features/CountTotalSize/CountTotalSizeRequestHandler.h"
 #include "../../../Features/LargestFiles/LargestFilesRequest.h"
 #include "../../../Features/LargestFiles/LargestFilesRequestHandler.h"
+#include "../../../Features/NewestFiles/NewestFilesRequest.h"
+#include "../../../Features/NewestFiles/NewestFilesRequestHandler.h"
 
 IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
     if (dynamic_cast<CountDirectoriesRequest*>(&request))
@@ -25,6 +27,9 @@ IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
 
     if (dynamic_cast<LargestFilesRequest*>(&request))
         return new LargestFilesRequestHandler;
+
+    if (dynamic_cast<NewestFilesRequest*>(&request))
+        return new NewestFilesRequestHandler;
 
     throw std::runtime_error("not yet implemeted");
 }

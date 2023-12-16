@@ -4,6 +4,7 @@
 
 #include "ConsoleUserInteractor.h"
 
+#include <iomanip>
 #include <iostream>
 
 bool ConsoleUserInteractor::shouldExit() {
@@ -16,7 +17,8 @@ IRequest* ConsoleUserInteractor::readRequest() {
     << "1 - подсчет количества директорий" << "\n"
     << "2 - подсчет количества файлов" << "\n"
     << "3 - подсчет суммарного размера файлов" << "\n"
-    << "4 - нахождение самых больших файлов" << "\n";
+    << "4 - нахождение самых больших файлов" << "\n"
+    << "5 - нахождение самых новых файлов" << "\n";
 
     int queryNumber;
     std::cin >> queryNumber;
@@ -30,6 +32,8 @@ IRequest* ConsoleUserInteractor::readRequest() {
             return readCountTotalSizeRequest();
         case 4:
             return readLargestFilesRequest();
+        case 5:
+            return readNewestFilesRequest();
         default:
             throw std::runtime_error("Неизвестная команда");
     }
@@ -105,4 +109,37 @@ LargestFilesRequest* ConsoleUserInteractor::readLargestFilesRequest() {
     std::cin >> sizeThreshold;
 
     return new LargestFilesRequest(directoryPath, maxDepthLevel, sizeThreshold);
+}
+
+NewestFilesRequest* ConsoleUserInteractor::readNewestFilesRequest() {
+    std::cout << "Введите путь к директории: " << std::endl;
+    std::string directoryPath;
+    std::cin >> directoryPath;
+
+    std::cout << "Введите желаемую глубину обхода (-1 для максимальной):" << std::endl;
+    int maxDepthLevel;
+    std::cin >> maxDepthLevel;
+
+    maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
+
+    if (maxDepthLevel <= 0)
+        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+
+    std::cout << "Введите минимальный дату и время" << std::endl;
+    std::cout << "Формат - 2023-12-16 12:30:45" << std::endl;
+    std::string dateTime;
+    std::cin >> dateTime;
+
+    time_t timeThreshold;
+
+    try {
+        std::tm tm = {};
+        std::stringstream ss(dateTime);
+        ss >> std::get_time(&tm, "%Y-%m-%d %H:%M:%S");
+        timeThreshold = std::mktime(&tm);
+    } catch (std::exception&) {
+        throw std::runtime_error("Неверный формат времени");
+    }
+
+    return new NewestFilesRequest(directoryPath, maxDepthLevel, timeThreshold);
 }

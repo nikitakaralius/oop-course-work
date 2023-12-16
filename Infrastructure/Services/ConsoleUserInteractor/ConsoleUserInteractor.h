@@ -9,8 +9,11 @@
 #include "../../../Features/CountFiles/CountFilesRequest.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequest.h"
 #include "../../../Features/LargestFiles/LargestFilesRequest.h"
+#include "../../../Features/NewestFiles/NewestFilesRequest.h"
 #include "../../Abstractions/IUserInteractor.h"
 
+
+class NewestFilesResponse;
 
 class ConsoleUserInteractor : public IUserInteractor {
 public:
@@ -25,6 +28,7 @@ private:
     CountFilesRequest* readCountFilesRequest();
     CountTotalSizeRequest* readCountTotalSizeRequest();
     LargestFilesRequest* readLargestFilesRequest();
+    NewestFilesRequest* readNewestFilesRequest();
 };
 
 
