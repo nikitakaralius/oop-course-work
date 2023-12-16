@@ -26,4 +26,8 @@ add_executable(FileWizard main.cpp
         Infrastructure/MIddleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h
         CQRS/Services/RequestSender/RequestSender.cpp
         CQRS/Services/RequestSender/RequestSender.h
+        Infrastructure/Application/Application.cpp
+        Infrastructure/Application/Application.h
+        Infrastructure/ApplicationBuilder/ApplicationBuilder.cpp
+        Infrastructure/ApplicationBuilder/ApplicationBuilder.h
 )
