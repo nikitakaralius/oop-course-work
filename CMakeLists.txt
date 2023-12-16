@@ -39,4 +39,10 @@ add_executable(FileWizard main.cpp
         Features/Mock/MockResponse.h
         Features/Mock/MockRequestHandler.cpp
         Features/Mock/MockRequestHandler.h
+        FileSystem/Abstractions/IFileSystemEntry.h
+        FileSystem/Models/DirectoryEntry/DirectoryEntry.cpp
+        FileSystem/Models/DirectoryEntry/DirectoryEntry.h
+        FileSystem/Models/DirectoryEntry/DirectoryEntry.h
+        FileSystem/Models/FileEntry/FileEntry.cpp
+        FileSystem/Models/FileEntry/FileEntry.h
 )

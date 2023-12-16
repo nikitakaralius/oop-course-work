@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "Infrastructure/ApplicationBuilder/ApplicationBuilder.h"
 #include "Infrastructure/MIddleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h"
 #include "Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.h"
