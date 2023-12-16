@@ -47,4 +47,6 @@ add_executable(FileWizard main.cpp
         Features/CountDirectories/CountDirectoriesResponse.h
         Features/CountDirectories/CountDirectoriesRequestHandler.cpp
         Features/CountDirectories/CountDirectoriesRequestHandler.h
+        Infrastructure/Services/FileLogger/FileLogger.cpp
+        Infrastructure/Services/FileLogger/FileLogger.h
 )
