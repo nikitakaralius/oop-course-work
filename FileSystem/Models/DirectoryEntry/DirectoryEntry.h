@@ -20,8 +20,8 @@ public:
     long long size() override;
     DateTime createdAt() override;
 
-    std::vector<DirectoryEntry*>* subdirectories() const;
-    std::vector<FileEntry*>* files() const;
+    std::vector<DirectoryEntry*> subdirectories() const;
+    std::vector<FileEntry*> files() const;
 
 private:
     std::string path;
