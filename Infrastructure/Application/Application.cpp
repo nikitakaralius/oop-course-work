@@ -3,3 +3,21 @@
 //
 
 #include "Application.h"
+
+Application::Application(RequestHandler* requestHandler) {
+    this->requestHandler = requestHandler;
+    middlewarePipeline = new MiddlewarePipeline(requestHandler);
+}
+
+Application::~Application() {
+    delete middlewarePipeline;
+    delete requestHandler;
+}
+
+void Application::use(IMiddleware* middleware) const {
+    middlewarePipeline->use(middleware);
+}
+
+void Application::run() const {
+
+}

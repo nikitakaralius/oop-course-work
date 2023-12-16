@@ -4,11 +4,22 @@
 
 #ifndef APPLICATION_H
 #define APPLICATION_H
-
+#include "../../CQRS/MIddleware/MidlewarePipeline/MiddlewarePipeline.h"
 
 
 class Application {
+public:
+    explicit Application(RequestHandler* requestHandler);
 
+    ~Application();
+
+    void use(IMiddleware* middleware) const;
+
+    void run() const;
+
+private:
+    MiddlewarePipeline* middlewarePipeline;
+    RequestHandler* requestHandler;
 };
 
 

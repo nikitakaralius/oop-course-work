@@ -3,3 +3,13 @@
 //
 
 #include "ApplicationBuilder.h"
+
+ApplicationBuilder& ApplicationBuilder::withRequestRouter(IRequestRouter* requestRouter) {
+    this->requestRouter = requestRouter;
+    return *this;
+}
+
+Application* ApplicationBuilder::build() {
+    auto handler = new RequestHandler(this->requestRouter);
+    return new Application(handler);
+}

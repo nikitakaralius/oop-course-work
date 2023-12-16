@@ -4,11 +4,20 @@
 
 #ifndef APPLICATIONBUILDER_H
 #define APPLICATIONBUILDER_H
-
+#include "../../CQRS/Abstractions/IRequestRouter.h"
+#include "../Application/Application.h"
 
 
 class ApplicationBuilder {
+private:
+    IRequestRouter* requestRouter;
 
+public:
+    static ApplicationBuilder& create() { return *new ApplicationBuilder(); }
+
+    ApplicationBuilder& withRequestRouter(IRequestRouter* requestRouter);
+
+    Application* build();
 };
 
 
