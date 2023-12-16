@@ -7,8 +7,7 @@
 
 #include "IRequest.h"
 #include "IResponse.h"
-
-#include "../Include/Aliases.h"
+#include "../Alias.h"
 
 class IMiddleware {
 public:

@@ -4,8 +4,11 @@ project(FileWizard)
 set(CMAKE_CXX_STANDARD 23)
 
 add_executable(FileWizard main.cpp
-        Abstractions/IStringFormattable.h
-        Abstractions/IRequest.h
-        Abstractions/IResponse.h
-        Abstractions/IMiddleware.h
-        Include/Aliases.h)
+        CQRS/Abstractions/IStringFormattable.h
+        CQRS/Alias.h
+        CQRS/Abstractions/IRequest.h
+        CQRS/Abstractions/IRequest.h
+        CQRS/Abstractions/IRequestHandler.h
+        CQRS/Abstractions/IMiddleware.h
+        CQRS/Abstractions/IResponse.h
+)
