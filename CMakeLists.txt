@@ -21,4 +21,7 @@ add_executable(FileWizard main.cpp
         Infrastructure/Abstractions/ILogger.h
         Infrastructure/Services/ConsoleLogger/ConsoleLogger.cpp
         Infrastructure/Services/ConsoleLogger/ConsoleLogger.h
+        Infrastructure/MIddleware/LoggerMiddleware/LoggerMiddleware.cpp
+        Infrastructure/MIddleware/LoggerMiddleware/LoggerMiddleware.h
+        Infrastructure/MIddleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h
 )

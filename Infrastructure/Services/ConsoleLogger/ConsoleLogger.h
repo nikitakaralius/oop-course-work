@@ -10,7 +10,7 @@
 
 class ConsoleLogger : public ILogger {
 public:
-    void Log(std::string text) override;
+    void log(std::string text) override;
 };
 
 

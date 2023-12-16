@@ -6,6 +6,6 @@
 
 #include <iostream>
 
-void ConsoleLogger::Log(std::string text) {
+void ConsoleLogger::log(std::string text) {
     std::cout << "[LOG]\t" << text << std::endl;
 }

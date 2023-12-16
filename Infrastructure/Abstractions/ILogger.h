@@ -11,7 +11,7 @@ class ILogger {
 public:
     virtual ~ILogger() = default;
 
-    virtual void Log(std::string text) = 0;
+    virtual void log(std::string text) = 0;
 };
 
 #endif //ILOGGER_H
