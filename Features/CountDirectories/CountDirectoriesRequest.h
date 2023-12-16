@@ -8,10 +8,10 @@
 #include <sstream>
 #include "../../CQRS/Abstractions/IRequest.h"
 
-class CountDirectoriesRequest final : IRequest {
+class CountDirectoriesRequest final : public IRequest {
 public:
-    CountDirectoriesRequest(const std::string& directory_path, int depth_level)
-        : directoryPath(directory_path),
+    CountDirectoriesRequest(std::string  directory_path, int depth_level)
+        : directoryPath(std::move(directory_path)),
           depthLevel(depth_level) { }
 
     std::string toString() override {
@@ -19,9 +19,12 @@ public:
 
         ss
         << "Подсчет количества директорий в "
-        << directoryPath
-        << " c глубиной обхода "
-        << depthLevel;
+        << directoryPath;
+
+        if (depthLevel == INT_MAX)
+            ss << " c максимальной глубиной обхода";
+        else
+            ss << " с глубиной обхода = " << depthLevel;
 
         return ss.str();
     };

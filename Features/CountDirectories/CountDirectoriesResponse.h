@@ -8,7 +8,7 @@
 #include <sstream>
 #include "../../CQRS/Abstractions/IResponse.h"
 
-class CountDirectoriesResponse : IResponse {
+class CountDirectoriesResponse final : public IResponse {
 public:
     explicit CountDirectoriesResponse(int directoryCount)
         : directoryCount(directoryCount) { }

@@ -6,6 +6,15 @@
 
 #include <iostream>
 
+constexpr const char* ANSI_COLOR_RED = "\x1b[31m";
+constexpr const char* ANSI_COLOR_GREEN = "\x1b[32m";
+constexpr const char* ANSI_COLOR_RESET = "\x1b[0m";
+
 void ConsoleLogger::log(std::string text) {
-    std::cout << "[LOG]\t" << text << std::endl;
+    std::cout
+    << ANSI_COLOR_GREEN
+    << "[LOG]\t"
+    << text
+    << ANSI_COLOR_RESET
+    << std::endl;
 }

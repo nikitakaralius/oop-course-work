@@ -5,6 +5,7 @@
 #ifndef CONSOLEUSERINTERACTOR_H
 #define CONSOLEUSERINTERACTOR_H
 
+#include "../../../Features/CountDirectories/CountDirectoriesRequest.h"
 #include "../../Abstractions/IUserInteractor.h"
 
 
@@ -16,6 +17,8 @@ public:
 
 private:
     bool shouldExit_ = false;
+
+    CountDirectoriesRequest* readCountDirectoriesRequest();
 };
 
 
