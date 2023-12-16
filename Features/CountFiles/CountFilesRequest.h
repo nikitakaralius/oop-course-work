@@ -10,7 +10,7 @@
 
 class CountFilesRequest final : public IRequest {
 public:
-    CountFilesRequest(std::string  directoryPath, int maxDepthLevel)
+    CountFilesRequest(std::string directoryPath, int maxDepthLevel)
         : directoryPath(std::move(directoryPath)),
           maxDepthLevel(maxDepthLevel) {
     }
