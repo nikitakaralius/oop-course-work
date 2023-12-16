@@ -21,9 +21,9 @@ add_executable(FileWizard main.cpp
         Infrastructure/Abstractions/ILogger.h
         Infrastructure/Services/ConsoleLogger/ConsoleLogger.cpp
         Infrastructure/Services/ConsoleLogger/ConsoleLogger.h
-        Infrastructure/MIddleware/LoggerMiddleware/LoggerMiddleware.cpp
-        Infrastructure/MIddleware/LoggerMiddleware/LoggerMiddleware.h
-        Infrastructure/MIddleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h
+        Infrastructure/Middleware/LoggerMiddleware/LoggerMiddleware.cpp
+        Infrastructure/Middleware/LoggerMiddleware/LoggerMiddleware.h
+        Infrastructure/Middleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h
         CQRS/Services/RequestSender/RequestSender.cpp
         CQRS/Services/RequestSender/RequestSender.h
         Infrastructure/Application/Application.cpp
@@ -49,7 +49,7 @@ add_executable(FileWizard main.cpp
         Features/CountDirectories/CountDirectoriesRequestHandler.h
         Infrastructure/Services/FileLogger/FileLogger.cpp
         Infrastructure/Services/FileLogger/FileLogger.h
-        Infrastructure/MIddleware/FileLoggerMiddleware/FileLoggerMiddleware.h
+        Infrastructure/Middleware/FileLoggerMiddleware/FileLoggerMiddleware.h
         Features/CountFiles/CountFilesRequest.h
         Features/CountFiles/CountFilesResponse.h
         Features/CountFiles/CountFilesRequestHandler.cpp

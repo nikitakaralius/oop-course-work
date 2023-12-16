@@ -1,6 +1,6 @@
 #include "Infrastructure/ApplicationBuilder/ApplicationBuilder.h"
-#include "Infrastructure/MIddleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h"
-#include "Infrastructure/MIddleware/FileLoggerMiddleware/FileLoggerMiddleware.h"
+#include "Infrastructure/Middleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h"
+#include "Infrastructure/Middleware/FileLoggerMiddleware/FileLoggerMiddleware.h"
 #include "Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.h"
 #include "Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.h"
 

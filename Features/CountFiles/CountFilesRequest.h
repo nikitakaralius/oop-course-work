@@ -18,7 +18,7 @@ public:
 
         ss
         << "Подсчет количества файлов в "
-        << getDirectoryPath()
+        << getDirectoryPath() << " "
         << getMaxDepthLevelDesription();
 
         return ss.str();
