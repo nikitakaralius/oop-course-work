@@ -17,7 +17,7 @@ public:
         std::stringstream ss;
 
         for (const auto file : largestFiles)
-            ss << file->name() << " - " << file->size() << " байт";
+            ss << file->name() << " - " << file->size() << " байт" << "\n";
 
         return ss.str();
     }
