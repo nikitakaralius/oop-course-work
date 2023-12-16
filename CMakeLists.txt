@@ -50,4 +50,32 @@ add_executable(FileWizard main.cpp
         Infrastructure/Services/FileLogger/FileLogger.cpp
         Infrastructure/Services/FileLogger/FileLogger.h
         Infrastructure/MIddleware/FileLoggerMiddleware/FileLoggerMiddleware.h
+        Features/CountFiles/CountFilesRequest.h
+        Features/CountFiles/CountFilesResponse.h
+        Features/CountFiles/CountFilesRequestHandler.cpp
+        Features/CountFiles/CountFilesRequestHandler.h
+        Features/CountTotalSize/CountTotalSizeRequest.h
+        Features/CountTotalSize/CountTotalSizeResponse.h
+        Features/CountTotalSize/CountTotalSizeRequestHandler.cpp
+        Features/CountTotalSize/CountTotalSizeRequestHandler.h
+        Features/FindDuplicates/FindDuplicatesRequest.h
+        Features/FindDuplicates/FindDuplicatesResponse.h
+        Features/FindDuplicates/FindDuplicatesRequestHandler.cpp
+        Features/FindDuplicates/FindDuplicatesRequestHandler.h
+        Features/NewestFiles/NewestFilesRequest.h
+        Features/NewestFiles/NewestFilesResponse.h
+        Features/NewestFiles/NewestFilesRequestHandler.cpp
+        Features/NewestFiles/NewestFilesRequestHandler.h
+        Features/OldestFiles/OldestFilesRequest.h
+        Features/OldestFiles/OldestFilesResponse.h
+        Features/OldestFiles/OldestFilesRequestHandler.cpp
+        Features/OldestFiles/OldestFilesRequestHandler.h
+        Features/QueryDirectories/QueryFilesRequest.h
+        Features/QueryDirectories/QueryFilesResponse.h
+        Features/QueryDirectories/QueryFilesRequestHandler.cpp
+        Features/QueryDirectories/QueryFilesRequestHandler.h
+        Features/QueryFiles/QueryFilesRequest.h
+        Features/QueryFiles/QueryFilesResponse.h
+        Features/QueryFiles/QueryFilesRequestHandler.cpp
+        Features/QueryFiles/QueryFilesRequestHandler.h
 )

@@ -1,0 +1,8 @@
+//
+// Created by Nikita Karalyus on 16/12/2023.
+//
+
+#ifndef COUNTTOTALSIZERESPONSE_H
+#define COUNTTOTALSIZERESPONSE_H
+
+#endif //COUNTTOTALSIZERESPONSE_H
