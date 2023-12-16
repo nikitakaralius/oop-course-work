@@ -4,7 +4,15 @@
 
 #include "ConsoleUserInteractor.h"
 
+#include <iostream>
+
 bool ConsoleUserInteractor::shouldExit() {
     shouldExit_ = !shouldExit_;
     return shouldExit_;
+}
+
+IRequest* ConsoleUserInteractor::readRequest() {
+    int a;
+    std::cin >> a;
+    return new MockRequest();
 }

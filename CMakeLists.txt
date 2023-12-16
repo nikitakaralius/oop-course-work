@@ -35,4 +35,6 @@ add_executable(FileWizard main.cpp
         Infrastructure/Abstractions/IUserInteractor.h
         Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.cpp
         Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.h
+        Features/Mock/MockRequest.h
+        Features/Mock/MockResponse.h
 )

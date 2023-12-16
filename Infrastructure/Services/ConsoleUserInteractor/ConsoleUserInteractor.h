@@ -12,6 +12,8 @@ class ConsoleUserInteractor : public IUserInteractor {
 public:
     bool shouldExit() override;
 
+    IRequest* readRequest() override;
+
 private:
     bool shouldExit_ = false;
 };
