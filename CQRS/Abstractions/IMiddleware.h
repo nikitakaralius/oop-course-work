@@ -14,7 +14,7 @@ public:
     virtual ~IMiddleware() = default;
 
     virtual IResponse* invoke(
-        const IRequest& request,
+        IRequest& request,
         RequestDelegate next) = 0;
 };
 

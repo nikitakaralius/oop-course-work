@@ -16,4 +16,6 @@ add_executable(FileWizard main.cpp
         CQRS/Services/RequestHandler/RequestHandler.cpp
         CQRS/Services/RequestHandler/RequestHandler.h
         CQRS/Services/RequestHandler/RequestHandler.cpp
+        CQRS/MIddleware/MidlewarePipeline/MiddlewarePipeline.cpp
+        CQRS/MIddleware/MidlewarePipeline/MiddlewarePipeline.h
 )

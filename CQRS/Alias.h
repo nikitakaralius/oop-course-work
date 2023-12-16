@@ -5,6 +5,6 @@
 #ifndef ALIAS_H
 #define ALIAS_H
 
-#define RequestDelegate std::function<IResponse*(const IRequest&)>
+#define RequestDelegate std::function<IResponse*(IRequest&)>
 
 #endif //ALIAS_H
