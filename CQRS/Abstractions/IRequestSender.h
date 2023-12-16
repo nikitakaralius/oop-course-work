@@ -11,7 +11,7 @@ class IRequestSender {
 public:
     virtual ~IRequestSender() = default;
 
-    virtual void send(const IRequest& request) = 0;
+    virtual void send(IRequest& request) = 0;
 };
 
 #endif //IREQUESTSENDER_H
