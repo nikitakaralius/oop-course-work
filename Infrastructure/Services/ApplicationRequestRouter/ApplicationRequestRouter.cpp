@@ -8,6 +8,8 @@
 #include "../../../Features/CountDirectories/CountDirectoriesRequestHandler.h"
 #include "../../../Features/CountFiles/CountFilesRequest.h"
 #include "../../../Features/CountFiles/CountFilesRequestHandler.h"
+#include "../../../Features/CountTotalSize/CountTotalSizeRequest.h"
+#include "../../../Features/CountTotalSize/CountTotalSizeRequestHandler.h"
 
 IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
     if (dynamic_cast<CountDirectoriesRequest*>(&request))
@@ -15,6 +17,9 @@ IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
 
     if (dynamic_cast<CountFilesRequest*>(&request))
         return new CountFilesRequestHandler;
+
+    if (dynamic_cast<CountTotalSizeRequest*>(&request))
+        return new CountTotalSizeRequestHandler;
 
     throw std::runtime_error("not yet implemeted");
 }
