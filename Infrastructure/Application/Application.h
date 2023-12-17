@@ -4,6 +4,7 @@
 
 #ifndef APPLICATION_H
 #define APPLICATION_H
+
 #include "../../CQRS/MIddleware/MiddlewarePipeline/MiddlewarePipeline.h"
 #include "../Abstractions/IUserInteractor.h"
 
@@ -21,9 +22,9 @@ public:
     void run() const;
 
 private:
-    MiddlewarePipeline* middlewarePipeline;
-    RequestHandler* requestHandler;
-    IUserInteractor* userInteractor;
+    MiddlewarePipeline* _middlewarePipeline;
+    RequestHandler* _requestHandler;
+    IUserInteractor* _userInteractor;
 };
 
 

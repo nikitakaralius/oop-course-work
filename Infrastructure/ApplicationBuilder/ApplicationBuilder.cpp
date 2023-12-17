@@ -5,16 +5,16 @@
 #include "ApplicationBuilder.h"
 
 ApplicationBuilder ApplicationBuilder::addRequestRouter(IRequestRouter* requestRouter) {
-    this->requestRouter = requestRouter;
+    this->_requestRouter = requestRouter;
     return *this;
 }
 
 ApplicationBuilder ApplicationBuilder::addUserInteractor(IUserInteractor* userInteractor) {
-    this->userInteractor = userInteractor;
+    this->_userInteractor = userInteractor;
     return *this;
 }
 
 Application* ApplicationBuilder::build() {
-    auto handler = new RequestHandler(this->requestRouter);
-    return new Application(handler, userInteractor);
+    auto handler = new RequestHandler(this->_requestRouter);
+    return new Application(handler, _userInteractor);
 }

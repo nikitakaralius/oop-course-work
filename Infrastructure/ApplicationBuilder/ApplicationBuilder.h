@@ -10,10 +10,6 @@
 
 
 class ApplicationBuilder {
-private:
-    IRequestRouter* requestRouter;
-    IUserInteractor* userInteractor;
-
 public:
     static ApplicationBuilder create() { return {}; }
 
@@ -22,6 +18,10 @@ public:
     ApplicationBuilder addUserInteractor(IUserInteractor* userInteractor);
 
     Application* build();
+
+private:
+    IRequestRouter* _requestRouter{};
+    IUserInteractor* _userInteractor{};
 };
 
 
