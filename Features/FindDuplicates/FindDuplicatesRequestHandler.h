@@ -10,7 +10,7 @@
 #include "../Common/FilesRequestHandler.h"
 
 
-class FindDuplicatesRequestHandler :
+class FindDuplicatesRequestHandler final :
         public FilesRequestHandler<
             FindDuplicatesRequest,
             FindDuplicatesResponse> {

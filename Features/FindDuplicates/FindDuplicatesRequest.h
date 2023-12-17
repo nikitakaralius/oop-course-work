@@ -4,18 +4,18 @@
 
 #ifndef FINDDUPLICATESREQUEST_H
 #define FINDDUPLICATESREQUEST_H
-#include <utility>
 
+#include <utility>
 #include "../Common/FilesRequest.h"
 
 class FindDuplicatesRequest final : public FilesRequest {
 public:
     FindDuplicatesRequest(
         const std::string& directoryPath,
-        int maxDepthLevel,
-        std::string target_file_path)
+        const int maxDepthLevel,
+        std::string targetFilePath)
         : FilesRequest(directoryPath, maxDepthLevel),
-          targetFilePath(std::move(target_file_path)) { }
+          _targetFilePath(std::move(targetFilePath)) { }
 
     std::string toString() override {
         std::stringstream ss;
@@ -28,10 +28,10 @@ public:
         return ss.str();
     }
 
-    std::string getTargetFilePath() const { return targetFilePath; }
+    std::string targetFilePath() const { return _targetFilePath; }
 
 private:
-    std::string targetFilePath;
+    std::string _targetFilePath;
 };
 
 #endif //FINDDUPLICATESREQUEST_H

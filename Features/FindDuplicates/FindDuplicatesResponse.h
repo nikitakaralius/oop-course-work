@@ -9,22 +9,22 @@
 #include "../../CQRS/Abstractions/IResponse.h"
 #include "../../FileSystem/Models/FileEntry/FileEntry.h"
 
-class FindDuplicatesResponse : public IResponse {
+class FindDuplicatesResponse final : public IResponse {
 public:
-    explicit FindDuplicatesResponse(std::vector<FileEntry*> duplicateFiles)
-    : duplicateFiles(duplicateFiles) {  }
+    explicit FindDuplicatesResponse(const std::vector<FileEntry*>& duplicateFiles)
+    : _duplicateFiles(duplicateFiles) {  }
 
     std::string toString() override {
         std::stringstream ss;
 
-        for (const auto file : duplicateFiles)
+        for (const auto file : _duplicateFiles)
             ss << file->getPath() << "\n";
 
         return ss.str();
     };
 
 private:
-    std::vector<FileEntry*> duplicateFiles;
+    std::vector<FileEntry*> _duplicateFiles;
 };
 
 #endif //FINDDUPLICATESRESPONSE_H
