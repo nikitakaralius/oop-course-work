@@ -16,14 +16,14 @@
 
 class NewestFilesResponse;
 
-class ConsoleUserInteractor : public IUserInteractor {
+class ConsoleUserInteractor final : public IUserInteractor {
 public:
     bool shouldExit() override;
 
     IRequest* readRequest() override;
 
 private:
-    bool shouldExit_ = false;
+    bool _shouldExit = false;
 
     CountDirectoriesRequest* readCountDirectoriesRequest();
     CountFilesRequest* readCountFilesRequest();

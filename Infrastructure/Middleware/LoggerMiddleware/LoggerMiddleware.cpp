@@ -5,14 +5,14 @@
 #include "LoggerMiddleware.h"
 
 LoggerMiddleware::~LoggerMiddleware() {
-    delete logger;
+    delete _logger;
 }
 
 IResponse* LoggerMiddleware::invoke(
     IRequest& request,
-    std::function<IResponse*(IRequest&)> next) {
-    logger->log(request.toString());
+    const std::function<IResponse*(IRequest&)> next) {
+    _logger->log(request.toString());
     const auto response = next(request);
-    logger->log(response->toString());
+    _logger->log(response->toString());
     return response;
 }

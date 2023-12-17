@@ -10,8 +10,8 @@
 
 class FileLoggerMiddleware final : public LoggerMiddleware {
 public:
-    explicit FileLoggerMiddleware()
-        : LoggerMiddleware(new FileLogger("history.log")) { }
+    explicit FileLoggerMiddleware(const std::string&filePath)
+        : LoggerMiddleware(new FileLogger(filePath)) { }
 };
 
 #endif //FILELOGGERMIDDLEWARE_H

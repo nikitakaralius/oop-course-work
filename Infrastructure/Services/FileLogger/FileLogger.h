@@ -13,12 +13,12 @@
 class FileLogger final : public ILogger {
 public:
     explicit FileLogger(std::string  filePath)
-    : filePath(std::move(filePath)) {}
+    : _filePath(std::move(filePath)) {}
 
     void log(std::string text) override;
 
 private:
-    std::string filePath;
+    std::string _filePath;
 };
 
 

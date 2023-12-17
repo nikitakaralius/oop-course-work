@@ -14,7 +14,7 @@ public:
 
     std::string toString() override {
         std::stringstream ss;
-        ss << "В процессе работы програмы возникла ошибка: " << _message;
+        ss << "В процессе работы программы возникла ошибка: " << _message;
         return ss.str();
     }
 

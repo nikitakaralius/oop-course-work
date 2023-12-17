@@ -12,7 +12,7 @@
 class LoggerMiddleware : public IMiddleware {
 public:
     explicit LoggerMiddleware(ILogger* logger)
-        : logger(logger) { }
+        : _logger(logger) { }
 
     ~LoggerMiddleware() override;
 
@@ -21,7 +21,7 @@ public:
         std::function<IResponse*(IRequest&)> next) override;
 
 private:
-    ILogger* logger;
+    ILogger* _logger;
 
 };
 

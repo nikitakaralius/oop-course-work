@@ -8,7 +8,7 @@
 #include "../../Abstractions/ILogger.h"
 
 
-class ConsoleLogger : public ILogger {
+class ConsoleLogger final : public ILogger {
 public:
     void log(std::string text) override;
 };

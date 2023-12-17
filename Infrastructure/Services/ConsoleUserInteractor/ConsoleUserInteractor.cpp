@@ -10,7 +10,7 @@
 #include "../../../Features/Exit/ExitRequest.h"
 
 bool ConsoleUserInteractor::shouldExit() {
-    return shouldExit_;
+    return _shouldExit;
 }
 
 IRequest* ConsoleUserInteractor::readRequest() {
@@ -41,7 +41,7 @@ IRequest* ConsoleUserInteractor::readRequest() {
         case '6':
             return readFindDuplicatesRequest();
         case 'e':
-            shouldExit_ = true;
+            _shouldExit = true;
             return new ExitRequest();
         default:
             throw std::runtime_error("Неизвестная команда");

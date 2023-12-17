@@ -41,5 +41,5 @@ IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
     if (dynamic_cast<ExitRequest*>(&request))
         return new ExitRequestHandler;
 
-    throw std::runtime_error("not yet implemeted");
+    throw std::runtime_error("No router found for request");
 }

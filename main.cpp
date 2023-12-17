@@ -13,7 +13,7 @@ int main() {
             .build();
 
     app->use(new ConsoleLoggerMiddleware);
-    app->use(new FileLoggerMiddleware);
+    app->use(new FileLoggerMiddleware("application.log"));
     app->use(new ExceptionHandlingMiddleware);
     app->run();
 
