@@ -12,9 +12,9 @@ int main() {
             .addUserInteractor(new ConsoleUserInteractor)
             .build();
 
-    app->use(new ExceptionHandlingMiddleware);
     app->use(new ConsoleLoggerMiddleware);
     app->use(new FileLoggerMiddleware);
+    app->use(new ExceptionHandlingMiddleware);
     app->run();
 
     delete app;
