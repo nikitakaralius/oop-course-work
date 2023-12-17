@@ -10,17 +10,17 @@
 
 class CountDirectoriesResponse final : public IResponse {
 public:
-    explicit CountDirectoriesResponse(int directoryCount)
-        : directoryCount(directoryCount) { }
+    explicit CountDirectoriesResponse(const int directoryCount)
+        : _directoryCount(directoryCount) { }
 
     std::string toString() override {
         std::stringstream ss;
-        ss << "Количество папок = " << directoryCount;
+        ss << "Количество папок = " << _directoryCount;
         return ss.str();
-    };
+    }
 
 private:
-    int directoryCount;
+    int _directoryCount;
 };
 
 #endif //COUNTDIRECTORIESRESPONSE_H

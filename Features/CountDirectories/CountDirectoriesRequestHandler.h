@@ -19,7 +19,10 @@ public:
     CountDirectoriesResponse* handleRequest(const CountDirectoriesRequest& request) override;
 
 private:
-    int countDirectories(DirectoryEntry& entry, int currrentLevel, int maxLevel);
+    int countDirectories(
+        const DirectoryEntry& entry,
+        int currrentLevel,
+        int maxLevel);
 };
 
 

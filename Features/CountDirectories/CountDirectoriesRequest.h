@@ -6,35 +6,25 @@
 #define COUNTDIRECTORIESREQUEST_H
 
 #include <sstream>
-#include "../../CQRS/Abstractions/IRequest.h"
+#include "../Common/FilesRequest.h"
 
-class CountDirectoriesRequest final : public IRequest {
+class CountDirectoriesRequest final : public FilesRequest {
 public:
-    CountDirectoriesRequest(std::string  directory_path, int depth_level)
-        : directoryPath(std::move(directory_path)),
-          depthLevel(depth_level) { }
+    explicit CountDirectoriesRequest(
+        const std::string& directoryPath,
+        const int maxDepthLevel)
+        : FilesRequest(directoryPath, maxDepthLevel) { }
 
     std::string toString() override {
         std::stringstream ss;
 
         ss
         << "Подсчет количества директорий в "
-        << directoryPath;
-
-        if (depthLevel == INT_MAX)
-            ss << " c максимальной глубиной обхода";
-        else
-            ss << " с глубиной обхода = " << depthLevel;
+        << directoryPath() << " "
+        << maxDepthLevelDesription();
 
         return ss.str();
     }
-
-    std::string getDirectoryPath() const { return directoryPath; }
-    int getDepthLevel() const { return depthLevel; }
-
-private:
-    std::string directoryPath;
-    int depthLevel;
 };
 
 #endif //COUNTDIRECTORIESREQUEST_H

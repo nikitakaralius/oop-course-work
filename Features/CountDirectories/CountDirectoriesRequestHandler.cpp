@@ -10,28 +10,31 @@
 namespace fs = std::filesystem;
 
 CountDirectoriesResponse* CountDirectoriesRequestHandler::handleRequest(const CountDirectoriesRequest& request) {
-    DirectoryEntry rootDirectory(request.getDirectoryPath());
+    const DirectoryEntry rootDirectory(request.directoryPath());
 
     const int directoryCount = countDirectories(
     rootDirectory,
     1,
-    request.getDepthLevel());
+    request.maxDepthLevel());
 
     return new CountDirectoriesResponse(directoryCount);
 }
 
-int CountDirectoriesRequestHandler::countDirectories(DirectoryEntry& entry, int currrentLevel, int maxLevel) {
+int CountDirectoriesRequestHandler::countDirectories(
+    const DirectoryEntry& entry,
+    const int currrentLevel,
+    const int maxLevel) {
     if (currrentLevel > maxLevel)
         return 0;
 
-    auto subdirectories = entry.subdirectories();
+    const auto subdirectories = entry.subdirectories();
 
     if (subdirectories.empty())
         return 0;
 
     int count = subdirectories.size();
 
-    for (auto subdirectory : subdirectories) {
+    for (const auto subdirectory : subdirectories) {
         count += countDirectories(*subdirectory, currrentLevel + 1, maxLevel);
     }
 
