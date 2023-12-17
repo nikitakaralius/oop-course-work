@@ -10,6 +10,8 @@
 #include "../../../Features/CountFiles/CountFilesRequestHandler.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequest.h"
 #include "../../../Features/CountTotalSize/CountTotalSizeRequestHandler.h"
+#include "../../../Features/Exception/ExceptionRequestHandler.h"
+#include "../../../Features/Exception/ExpcetionRequest.h"
 #include "../../../Features/Exit/ExitRequest.h"
 #include "../../../Features/Exit/ExitRequestHandler.h"
 #include "../../../Features/FindDuplicates/FindDuplicatesRequest.h"
@@ -40,6 +42,9 @@ IRequestHandler* ApplicationRequestRouter::getHandler(IRequest& request) {
 
     if (dynamic_cast<ExitRequest*>(&request))
         return new ExitRequestHandler;
+
+    if (dynamic_cast<ExceptionRequest*>(&request))
+        return new ExceptionRequestHandler;
 
     throw std::runtime_error("No router found for request");
 }

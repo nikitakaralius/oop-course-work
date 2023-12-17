@@ -82,4 +82,6 @@ add_executable(FileWizard main.cpp
         Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandlingMiddleware.cpp
         Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandlingMiddleware.h
         Features/Exception/ExceptionResponse.h
+        Features/Exception/ExpcetionRequest.h
+        Features/Exception/ExceptionRequestHandler.h
 )

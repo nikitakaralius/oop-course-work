@@ -7,6 +7,8 @@
 #include <iomanip>
 #include <iostream>
 
+#include "../../../Features/Exception/ExceptionResponse.h"
+#include "../../../Features/Exception/ExpcetionRequest.h"
 #include "../../../Features/Exit/ExitRequest.h"
 
 bool ConsoleUserInteractor::shouldExit() {
@@ -44,7 +46,7 @@ IRequest* ConsoleUserInteractor::readRequest() {
             _shouldExit = true;
             return new ExitRequest();
         default:
-            throw std::runtime_error("Неизвестная команда");
+            return new ExceptionRequest("Введена неизвестная команда");
     }
 }
 
