@@ -1,5 +1,6 @@
 #include "Infrastructure/ApplicationBuilder/ApplicationBuilder.h"
 #include "Infrastructure/Middleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddleware.h"
+#include "Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandlingMiddleware.h"
 #include "Infrastructure/Middleware/FileLoggerMiddleware/FileLoggerMiddleware.h"
 #include "Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestRouter.h"
 #include "Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.h"
@@ -11,6 +12,7 @@ int main() {
             .addUserInteractor(new ConsoleUserInteractor)
             .build();
 
+    app->use(new ExceptionHandlingMiddleware);
     app->use(new ConsoleLoggerMiddleware);
     app->use(new FileLoggerMiddleware);
     app->run();

@@ -79,4 +79,7 @@ add_executable(FileWizard main.cpp
         FileSystem/Exceptions/FileNotFoundException.h
         FileSystem/Exceptions/ApplicationException.h
         FileSystem/Exceptions/InvalidFormatException.h
+        Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandlingMiddleware.cpp
+        Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandlingMiddleware.h
+        Features/Exception/ExceptionResponse.h
 )
