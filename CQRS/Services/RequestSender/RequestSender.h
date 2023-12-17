@@ -10,14 +10,14 @@
 
 
 class RequestSender final : public IRequestSender {
-private:
-    RequestHandler* requestHandler;
-
 public:
     explicit RequestSender(RequestHandler* request_handler)
-        : requestHandler(request_handler) { }
+        : _requestHandler(request_handler) { }
 
     void send(IRequest& request) override;
+
+private:
+    RequestHandler* _requestHandler;
 };
 
 

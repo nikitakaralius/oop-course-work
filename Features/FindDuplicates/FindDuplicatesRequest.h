@@ -22,8 +22,8 @@ public:
 
         ss
         << "Поиск дублирующихся файлов в "
-        << getDirectoryPath() << " "
-        << getMaxDepthLevelDesription();
+        << directoryPath() << " "
+        << maxDepthLevelDesription();
 
         return ss.str();
     }

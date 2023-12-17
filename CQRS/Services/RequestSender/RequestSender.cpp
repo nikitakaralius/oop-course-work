@@ -5,5 +5,5 @@
 #include "RequestSender.h"
 
 void RequestSender::send(IRequest& request) {
-    this->requestHandler->handleRequest(request);
+    this->_requestHandler->handleRequest(request);
 }

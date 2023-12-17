@@ -9,14 +9,14 @@
 
 
 class RequestHandler {
-private:
-    IRequestRouter* router;
-
 public:
     explicit RequestHandler(IRequestRouter* router)
-        : router(router) {}
+        : _router(router) {}
 
     IResponse* handleRequest(IRequest& request) const;
+
+private:
+    IRequestRouter* _router;
 };
 
 

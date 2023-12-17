@@ -12,26 +12,26 @@
 template<class TRequest, class TResponse>
 class FilesRequestHandler :  public IGenericRequestHandler<TRequest, TResponse> {
 protected:
-    std::vector<FileEntry*> getFiles(const FilesRequest& request) const;
+    std::vector<FileEntry*> retrieveFilesRecursively(const FilesRequest& request) const;
 
 private:
-    std::vector<FileEntry*> getFiles(
+    std::vector<FileEntry*> retrieveFilesRecursively(
         const DirectoryEntry& directory,
         int currentDepthLevel,
         int maxDepthLevel) const;
 };
 
 template<class TRequest, class TResponse>
-std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::getFiles(const FilesRequest& request) const {
-    auto rootDirectory = DirectoryEntry(request.getDirectoryPath());
-    return getFiles(rootDirectory, 1, request.getMaxDepthLevel());
+std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::retrieveFilesRecursively(const FilesRequest& request) const {
+    const auto rootDirectory = DirectoryEntry(request.directoryPath());
+    return retrieveFilesRecursively(rootDirectory, 1, request.maxDepthLevel());
 }
 
 template<class TRequest, class TResponse>
-std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::getFiles(
+std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::retrieveFilesRecursively(
     const DirectoryEntry& directory,
-    int currentDepthLevel,
-    int maxDepthLevel) const {
+    const int currentDepthLevel,
+    const int maxDepthLevel) const {
     if (currentDepthLevel > maxDepthLevel)
         return {};
 
@@ -43,13 +43,13 @@ std::vector<FileEntry*> FilesRequestHandler<TRequest, TResponse>::getFiles(
         directoryFiles.begin(),
         directoryFiles.end());
 
-    auto subdirectories = directory.subdirectories();
+    const auto subdirectories = directory.subdirectories();
 
     if (subdirectories.empty())
         return files;
 
     for (const auto subdirectory : subdirectories) {
-        auto subdirectoryFiles = getFiles(
+        auto subdirectoryFiles = retrieveFilesRecursively(
             *subdirectory,
             currentDepthLevel + 1,
             maxDepthLevel);

@@ -12,27 +12,27 @@ class FilesRequest : public IRequest {
 public:
     explicit FilesRequest(
         std::string directoryPath,
-        int maxDepthLevel)
-        : directoryPath(std::move(directoryPath)),
-          maxDepthLevel(maxDepthLevel) { }
+        const int maxDepthLevel)
+        : _maxDepthLevel(maxDepthLevel),
+          _directoryPath(std::move(directoryPath)) { }
 
-    std::string getDirectoryPath() const { return directoryPath; }
+    std::string directoryPath() const { return _directoryPath; }
 
-    int getMaxDepthLevel() const { return maxDepthLevel; }
+    int maxDepthLevel() const { return _maxDepthLevel; }
 
-    std::string getMaxDepthLevelDesription() const {
-        if (maxDepthLevel == INT_MAX)
+    std::string maxDepthLevelDesription() const {
+        if (_maxDepthLevel == INT_MAX)
             return "c максимальной глубиной обхода";
 
         std::stringstream ss;
-        ss << "с глубиной обхода = " << maxDepthLevel;
+        ss << "с глубиной обхода = " << _maxDepthLevel;
 
         return ss.str();
     }
 
 private:
-    int maxDepthLevel;
-    std::string directoryPath;
+    int _maxDepthLevel;
+    std::string _directoryPath;
 };
 
 #endif //FILESREQUEST_H

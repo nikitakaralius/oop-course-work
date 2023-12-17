@@ -5,7 +5,7 @@
 #include "LargestFilesRequestHandler.h"
 
 LargestFilesResponse* LargestFilesRequestHandler::handleRequest(const LargestFilesRequest&request) {
-    auto files = getFiles(request);
+    auto files = retrieveFilesRecursively(request);
     auto sizeThreshold = request.getSizeThreshold();
 
     std::vector<FileEntry *> largestFiles;

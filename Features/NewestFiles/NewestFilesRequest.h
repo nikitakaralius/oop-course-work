@@ -23,8 +23,8 @@ public:
 
         ss
         << "Поиск самых новых файлов в "
-        << getDirectoryPath() << " "
-        << getMaxDepthLevelDesription();
+        << directoryPath() << " "
+        << maxDepthLevelDesription();
 
         return ss.str();
     };

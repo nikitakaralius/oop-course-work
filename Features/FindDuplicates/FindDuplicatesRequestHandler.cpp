@@ -5,7 +5,7 @@
 #include "FindDuplicatesRequestHandler.h"
 
 FindDuplicatesResponse* FindDuplicatesRequestHandler::handleRequest(const FindDuplicatesRequest& request) {
-    auto files = getFiles(request);
+    auto files = retrieveFilesRecursively(request);
     auto targetFile = FileEntry(request.getTargetFilePath());
 
     std::vector<FileEntry *> duplicateFiles;

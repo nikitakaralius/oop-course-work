@@ -6,7 +6,7 @@
 #include <numeric>
 
 CountTotalSizeResponse* CountTotalSizeRequestHandler::handleRequest(const CountTotalSizeRequest& request) {
-    auto files = getFiles(request);
+    auto files = retrieveFilesRecursively(request);
 
     const auto totalSize = std::accumulate(
     files.begin(),

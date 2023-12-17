@@ -18,8 +18,8 @@ public:
 
         ss
         << "Подсчет количества файлов в "
-        << getDirectoryPath() << " "
-        << getMaxDepthLevelDesription();
+        << directoryPath() << " "
+        << maxDepthLevelDesription();
 
         return ss.str();
     }

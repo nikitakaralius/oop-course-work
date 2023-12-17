@@ -24,8 +24,8 @@ public:
 
         ss
         << "Самые болишие файлы в "
-        << getDirectoryPath() << " "
-        << getMaxDepthLevelDesription();
+        << directoryPath() << " "
+        << maxDepthLevelDesription();
 
         return ss.str();
     };

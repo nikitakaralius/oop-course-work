@@ -5,7 +5,7 @@
 #include "NewestFilesRequestHandler.h"
 
 NewestFilesResponse* NewestFilesRequestHandler::handleRequest(const NewestFilesRequest& request) {
-    auto files = getFiles(request);
+    auto files = retrieveFilesRecursively(request);
     auto timeThreshold = request.getTimeThreshold();
 
     std::vector<FileEntry *> largestFiles;

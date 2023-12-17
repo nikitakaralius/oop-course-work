@@ -18,8 +18,8 @@ public:
 
         ss
         << "Подсчет суммарного размера файлов в "
-        << getDirectoryPath() << " "
-        << getMaxDepthLevelDesription();
+        << directoryPath() << " "
+        << maxDepthLevelDesription();
 
         return ss.str();
     }
