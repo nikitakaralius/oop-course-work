@@ -4,18 +4,12 @@
 
 #ifndef DIRECTORYNOTFOUNDEXCEPTION_H
 #define DIRECTORYNOTFOUNDEXCEPTION_H
-#include <stdexcept>
+#include "ApplicationException.h"
 
-class DirectoryNotFoundException final : public std::runtime_error {
+class DirectoryNotFoundException final : public ApplicationException {
 public:
-    explicit DirectoryNotFoundException(const std::string& basic_string)
-        : runtime_error(basic_string) { }
-
-    explicit DirectoryNotFoundException(const char* string)
-        : runtime_error(string) { }
-
-    explicit DirectoryNotFoundException(const runtime_error& runtime_error)
-        : runtime_error(runtime_error) { }
+    explicit DirectoryNotFoundException(const std::string& message)
+        : ApplicationException(message) { }
 };
 
 #endif //DIRECTORYNOTFOUNDEXCEPTION_H

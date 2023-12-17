@@ -76,4 +76,7 @@ add_executable(FileWizard main.cpp
         Features/Exit/ExitResponse.h
         Features/Exit/ExitRequestHandler.h
         FileSystem/Exceptions/DirectoryNotFoundException.h
+        FileSystem/Exceptions/FileNotFoundException.h
+        FileSystem/Exceptions/ApplicationException.h
+        FileSystem/Exceptions/InvalidFormatException.h
 )
