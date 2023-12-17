@@ -5,7 +5,7 @@
 #include "CountFilesRequestHandler.h"
 
 CountFilesResponse* CountFilesRequestHandler::handleRequest(const CountFilesRequest& request) {
-    auto files = retrieveFilesRecursively(request);
-    auto response =  new CountFilesResponse(files.size());
+    const auto files = retrieveFilesRecursively(request);
+    const auto response =  new CountFilesResponse(files.size());
     return response;
 }

@@ -10,7 +10,9 @@
 
 class CountFilesRequest final : public FilesRequest {
 public:
-    CountFilesRequest(const std::string& directoryPath, int maxDepthLevel)
+    explicit CountFilesRequest(
+        const std::string& directoryPath,
+        const int maxDepthLevel)
         : FilesRequest(directoryPath, maxDepthLevel) { }
 
     std::string toString() override {

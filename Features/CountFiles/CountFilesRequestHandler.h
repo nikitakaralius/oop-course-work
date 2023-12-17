@@ -10,7 +10,7 @@
 #include "../Common/FilesRequestHandler.h"
 
 
-class CountFilesRequestHandler :
+class CountFilesRequestHandler final :
         public FilesRequestHandler<
             CountFilesRequest,
             CountFilesResponse> {

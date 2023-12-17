@@ -8,19 +8,19 @@
 #include <sstream>
 #include "../../CQRS/Abstractions/IResponse.h"
 
-class CountFilesResponse : public IResponse {
+class CountFilesResponse final : public IResponse {
 public:
-    explicit CountFilesResponse(int fileCount)
-        : fileCount(fileCount) { }
+    explicit CountFilesResponse(const size_t fileCount)
+        : _fileCount(fileCount) { }
 
     std::string toString() override {
         std::stringstream ss;
-        ss << "Количество файлов = " << fileCount;
+        ss << "Количество файлов = " << _fileCount;
         return ss.str();
     };
 
 private:
-    int fileCount;
+    size_t _fileCount;
 };
 
 #endif //COUNTFILESRESPONSE_H
