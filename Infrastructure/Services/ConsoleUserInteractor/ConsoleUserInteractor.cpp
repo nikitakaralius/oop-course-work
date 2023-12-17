@@ -10,6 +10,7 @@
 #include "../../../Features/Exception/ExceptionResponse.h"
 #include "../../../Features/Exception/ExpcetionRequest.h"
 #include "../../../Features/Exit/ExitRequest.h"
+#include "../../../FileSystem/Exceptions/InvalidFormatException.h"
 
 bool ConsoleUserInteractor::shouldExit() {
     return _shouldExit;
@@ -29,24 +30,30 @@ IRequest* ConsoleUserInteractor::readRequest() {
     char query;
     std::cin >> query;
 
-    switch (query) {
-        case '1':
-            return readCountDirectoriesRequest();
-        case '2':
-            return readCountFilesRequest();
-        case '3':
-            return readCountTotalSizeRequest();
-        case '4':
-            return readLargestFilesRequest();
-        case '5':
-            return readNewestFilesRequest();
-        case '6':
-            return readFindDuplicatesRequest();
-        case 'e':
-            _shouldExit = true;
+    try {
+        switch (query) {
+            case '1':
+                return readCountDirectoriesRequest();
+            case '2':
+                return readCountFilesRequest();
+            case '3':
+                return readCountTotalSizeRequest();
+            case '4':
+                return readLargestFilesRequest();
+            case '5':
+                return readNewestFilesRequest();
+            case '6':
+                return readFindDuplicatesRequest();
+            case 'e':
+                _shouldExit = true;
             return new ExitRequest();
-        default:
-            return new ExceptionRequest("Введена неизвестная команда");
+            default:
+                return new ExceptionRequest("Введена неизвестная команда");
+        }
+    } catch (ApplicationException& ex) {
+        return new ExceptionRequest(ex.message());
+    } catch (std::exception& ex) {
+        return new ExceptionRequest(ex.what());
     }
 }
 
@@ -62,7 +69,7 @@ CountDirectoriesRequest* ConsoleUserInteractor::readCountDirectoriesRequest() {
     maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
 
     if (maxDepthLevel <= 0)
-        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+        throw InvalidFormatException("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
 
     return new CountDirectoriesRequest(directoryPath, maxDepthLevel);
 }
@@ -79,7 +86,7 @@ CountFilesRequest* ConsoleUserInteractor::readCountFilesRequest() {
     maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
 
     if (maxDepthLevel <= 0)
-        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+        throw InvalidFormatException("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
 
     return new CountFilesRequest(directoryPath, maxDepthLevel);
 }
@@ -96,7 +103,7 @@ CountTotalSizeRequest* ConsoleUserInteractor::readCountTotalSizeRequest() {
     maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
 
     if (maxDepthLevel <= 0)
-        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+        throw InvalidFormatException("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
 
     return new CountTotalSizeRequest(directoryPath, maxDepthLevel);
 }
@@ -113,7 +120,7 @@ LargestFilesRequest* ConsoleUserInteractor::readLargestFilesRequest() {
     maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
 
     if (maxDepthLevel <= 0)
-        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+        throw InvalidFormatException("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
 
     std::cout << "Введите минимальный ограничение на размер файла" << std::endl;
     long long sizeThreshold;
@@ -134,7 +141,7 @@ NewestFilesRequest* ConsoleUserInteractor::readNewestFilesRequest() {
     maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
 
     if (maxDepthLevel <= 0)
-        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+        throw InvalidFormatException("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
 
     std::cout << "Введите минимальный дату и время" << std::endl;
     std::cout << "Формат - 2023-12-16 12:30:45" << std::endl;
@@ -149,7 +156,7 @@ NewestFilesRequest* ConsoleUserInteractor::readNewestFilesRequest() {
         ss >> std::get_time(&tm, "%Y-%m-%d %H:%M:%S");
         timeThreshold = std::mktime(&tm);
     } catch (std::exception&) {
-        throw std::runtime_error("Неверный формат времени");
+        throw InvalidFormatException("Неверный формат времени");
     }
 
     return new NewestFilesRequest(directoryPath, maxDepthLevel, timeThreshold);
@@ -171,7 +178,7 @@ FindDuplicatesRequest* ConsoleUserInteractor::readFindDuplicatesRequest() {
     maxDepthLevel = maxDepthLevel == -1 ? INT_MAX : maxDepthLevel;
 
     if (maxDepthLevel <= 0)
-        throw std::runtime_error("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
+        throw InvalidFormatException("Глубина обхода должна быть либо больше 1, либо -1 для максимальной");
 
     return new FindDuplicatesRequest(directoryPath, maxDepthLevel, filePath);
 }
