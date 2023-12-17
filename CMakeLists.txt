@@ -75,4 +75,5 @@ add_executable(FileWizard main.cpp
         Features/Exit/ExitRequest.h
         Features/Exit/ExitResponse.h
         Features/Exit/ExitRequestHandler.h
+        FileSystem/Exceptions/DirectoryNotFoundException.h
 )

@@ -3,8 +3,6 @@
 //
 
 #include "DirectoryEntry.h"
-#include <__filesystem/directory_iterator.h>
-
 #include <filesystem>
 
 namespace fs = std::filesystem;
@@ -18,26 +16,26 @@ long long DirectoryEntry::size() {
 }
 
 time_t DirectoryEntry::updatedAt() {
-    fs::file_time_type lastWriteTime = fs::last_write_time(path);
-    return toTimeT(lastWriteTime);
+    const auto updatedAt = fs::last_write_time(path);
+    return toTimeT(updatedAt);
 }
 
 std::vector<DirectoryEntry*> DirectoryEntry::subdirectories() const {
-    auto subdirs = std::vector<DirectoryEntry*>();
+    auto subdirectories = std::vector<DirectoryEntry*>();
 
     for (const auto& entry : fs::directory_iterator(path)) {
         if (!entry.is_directory()) continue;
 
-        subdirs.push_back(new DirectoryEntry(entry.path().string()));
+        subdirectories.push_back(new DirectoryEntry(entry.path().string()));
     }
 
-    return subdirs;
+    return subdirectories;
 }
 
 std::vector<FileEntry*> DirectoryEntry::files() const {
     auto files = std::vector<FileEntry *>();
 
-    for (const auto&entry: fs::directory_iterator(path)) {
+    for (const auto& entry: fs::directory_iterator(path)) {
         if (!entry.is_regular_file()) continue;
 
         files.push_back(new FileEntry(entry.path().string()));
@@ -49,9 +47,9 @@ std::vector<FileEntry*> DirectoryEntry::files() const {
 long long DirectoryEntry::size(const fs::path& directoryPath) const {
     long long size = 0;
     for (const auto& entry : fs::recursive_directory_iterator(directoryPath)) {
-        if (is_regular_file(entry.path())) {
-            size += file_size(entry.path());
-        }
+        if (!is_regular_file(entry.path())) continue;
+
+        size += file_size(entry.path());
     }
     return size;
 }

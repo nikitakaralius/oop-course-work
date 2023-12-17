@@ -6,9 +6,10 @@
 #define DIRECTORYENTRY_H
 
 #include <utility>
-#include <__filesystem/path.h>
+#include <filesystem>
 
 #include "../../Abstractions/IFileSystemEntry.h"
+#include "../../Exceptions/DirectoryNotFoundException.h"
 #include "../FileEntry/FileEntry.h"
 
 namespace fs = std::filesystem;
@@ -16,7 +17,10 @@ namespace fs = std::filesystem;
 
 class DirectoryEntry final : public IFileSystemEntry {
 public:
-    explicit DirectoryEntry(std::string path) : path(std::move(path)) { }
+    explicit DirectoryEntry(std::string path) : path(std::move(path)) {
+        if (!fs::exists(path))
+            throw DirectoryNotFoundException("Директория " + path + " не существует");
+    }
 
     std::string name() override;
     long long size() override;
