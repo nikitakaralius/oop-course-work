@@ -10,7 +10,7 @@
 
 class FileEntry final : IFileSystemEntry {
 public:
-    explicit FileEntry(std::string path);
+    explicit FileEntry(const std::string&path);
 
     std::string name() override;
     long long size() override;

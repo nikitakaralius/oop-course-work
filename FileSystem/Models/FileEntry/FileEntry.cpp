@@ -3,14 +3,14 @@
 //
 
 #include "FileEntry.h"
-
 #include <__filesystem/operations.h>
+#include "../../Exceptions/FileNotFoundException.h"
 
 namespace fs = std::filesystem;
 
-FileEntry::FileEntry(std::string path) {
+FileEntry::FileEntry(const std::string& path) {
     if (!fs::exists(path))
-        throw std::runtime_error("File " + path + " does not exist");
+        throw FileNotFoundException("File " + path + " does not exist");
 
     this->path = path;
 }
@@ -24,6 +24,6 @@ long long FileEntry::size() {
 }
 
 time_t FileEntry::updatedAt() {
-    auto lastWriteTime = fs::last_write_time(path);
-    return toTimeT(lastWriteTime);
+    const auto updatedAt = fs::last_write_time(path);
+    return toTimeT(updatedAt);
 }
