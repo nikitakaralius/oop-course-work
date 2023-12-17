@@ -10,7 +10,7 @@
 #include "../Common/FilesRequestHandler.h"
 
 
-class LargestFilesRequestHandler :
+class LargestFilesRequestHandler final :
         public FilesRequestHandler<
             LargestFilesRequest,
             LargestFilesResponse> {

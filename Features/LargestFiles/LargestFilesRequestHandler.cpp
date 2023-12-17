@@ -6,7 +6,7 @@
 
 LargestFilesResponse* LargestFilesRequestHandler::handleRequest(const LargestFilesRequest&request) {
     auto files = retrieveFilesRecursively(request);
-    auto sizeThreshold = request.getSizeThreshold();
+    auto sizeThreshold = request.sizeThreshold();
 
     std::vector<FileEntry *> largestFiles;
     std::ranges::copy_if(

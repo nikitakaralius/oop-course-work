@@ -11,19 +11,20 @@
 
 class LargestFilesResponse final : public IResponse {
 public:
-    explicit LargestFilesResponse(std::vector<FileEntry*> largestFiles) : largestFiles(largestFiles) {  }
+    explicit LargestFilesResponse(const std::vector<FileEntry*>&largestFiles)
+        : _largestFiles(largestFiles) {  }
 
     std::string toString() override {
         std::stringstream ss;
 
-        for (const auto file : largestFiles)
+        for (const auto file : _largestFiles)
             ss << file->name() << " - " << file->size() << " байт" << "\n";
 
         return ss.str();
     }
 
 private:
-    std::vector<FileEntry*> largestFiles;
+    std::vector<FileEntry*> _largestFiles;
 };
 
 #endif //LARGESTFILESRESPONSE_H

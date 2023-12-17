@@ -7,16 +7,16 @@
 
 #include "../Common/FilesRequest.h"
 
-class NewestFilesRequest : public FilesRequest {
+class NewestFilesRequest final : public FilesRequest {
 public:
     NewestFilesRequest(
         const std::string& directoryPath,
-        int maxDepthLevel,
-        time_t time_threshold)
+        const int maxDepthLevel,
+        const time_t timeThreshold)
         : FilesRequest(directoryPath, maxDepthLevel),
-          timeThreshold(time_threshold) { }
+          _timeThreshold(timeThreshold) { }
 
-    time_t getTimeThreshold() const { return timeThreshold; }
+    time_t timeThreshold() const { return _timeThreshold; }
 
     std::string toString() override {
         std::stringstream ss;
@@ -30,7 +30,7 @@ public:
     };
 
 private:
-    time_t timeThreshold;
+    time_t _timeThreshold;
 };
 
 #endif //NEWESTFILESREQUEST_H

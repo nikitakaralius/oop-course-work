@@ -14,21 +14,22 @@ class FileEntry;
 
 class NewestFilesResponse final : public IResponse {
 public:
-    explicit NewestFilesResponse(std::vector<FileEntry*> newestFiles) : newestFiles(newestFiles) {  }
+    explicit NewestFilesResponse(const std::vector<FileEntry*>& newestFiles)
+        : _newestFiles(newestFiles) {  }
 
     std::string toString() override {
         std::stringstream ss;
 
-        for (const auto file : newestFiles) {
+        for (const auto file : _newestFiles) {
             time_t createdAt = file->createdAt();
-            ss << file->name() << " - " << std::ctime(&createdAt) << "\n";
+            ss << file->name() << " - " << std::ctime(&createdAt);
         }
 
         return ss.str();
     };
 
 private:
-    std::vector<FileEntry*> newestFiles;
+    std::vector<FileEntry*> _newestFiles;
 };
 
 #endif //NEWESTFILESRESPONSE_H

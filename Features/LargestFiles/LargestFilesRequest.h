@@ -12,12 +12,12 @@ class LargestFilesRequest final : public FilesRequest {
 public:
     LargestFilesRequest(
         const std::string&directoryPath,
-        int maxDepthLevel,
-        long long sizeThreshold)
+        const int maxDepthLevel,
+        const long long sizeThreshold)
         : FilesRequest(directoryPath, maxDepthLevel),
-          sizeThreshold(sizeThreshold) { }
+          _sizeThreshold(sizeThreshold) { }
 
-    long long getSizeThreshold() const { return sizeThreshold; }
+    long long sizeThreshold() const { return _sizeThreshold; }
 
     std::string toString() override {
         std::stringstream ss;
@@ -31,7 +31,7 @@ public:
     };
 
 private:
-    long long sizeThreshold;
+    long long _sizeThreshold;
 };
 
 #endif //LARGESTFILESREQUEST_H

@@ -9,7 +9,7 @@
 #include "../Common/FilesRequestHandler.h"
 
 
-class NewestFilesRequestHandler :
+class NewestFilesRequestHandler final :
         public FilesRequestHandler<
             NewestFilesRequest,
             NewestFilesResponse> {
