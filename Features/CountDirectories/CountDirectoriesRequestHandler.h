@@ -19,7 +19,7 @@ public:
     CountDirectoriesResponse* handleRequest(const CountDirectoriesRequest& request) override;
 
 private:
-    int countDirectories(
+    size_t countDirectories(
         const DirectoryEntry& entry,
         int currrentLevel,
         int maxLevel);

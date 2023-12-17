@@ -10,17 +10,17 @@
 
 class CountTotalSizeResponse final : public IResponse {
 public:
-    explicit CountTotalSizeResponse(long long total_size)
-        : totalSize(total_size) { }
+    explicit CountTotalSizeResponse(const long long totalSize)
+        : _totalSize(totalSize) { }
 
     std::string toString() override {
         std::stringstream ss;
-        ss << "Суммарный размер файлов = " << totalSize << " байт";
+        ss << "Суммарный размер файлов = " << _totalSize << " байт";
         return ss.str();
     }
 
 private:
-    long long totalSize;
+    long long _totalSize;
 };
 
 #endif //COUNTTOTALSIZERESPONSE_H

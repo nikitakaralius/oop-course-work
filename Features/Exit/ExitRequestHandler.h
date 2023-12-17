@@ -9,11 +9,11 @@
 #include "ExitResponse.h"
 #include "../../CQRS/Abstractions/IRequestHandler.h"
 
-class ExitRequestHandler : public IGenericRequestHandler<ExitRequest, ExitResponse> {
+class ExitRequestHandler final : public IGenericRequestHandler<ExitRequest, ExitResponse> {
 public:
     ExitResponse* handleRequest(const ExitRequest& request) override {
         return new ExitResponse;
-    };
+    }
 };
 
 #endif //EXITREQUESTHANDLER_H

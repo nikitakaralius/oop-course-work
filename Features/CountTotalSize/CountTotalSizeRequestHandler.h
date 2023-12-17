@@ -10,7 +10,7 @@
 #include "../Common/FilesRequestHandler.h"
 
 
-class CountTotalSizeRequestHandler :
+class CountTotalSizeRequestHandler final :
         public FilesRequestHandler<
             CountTotalSizeRequest,
             CountTotalSizeResponse> {

@@ -12,8 +12,8 @@ CountTotalSizeResponse* CountTotalSizeRequestHandler::handleRequest(const CountT
     files.begin(),
     files.end(),
     0l,
-    [](long long totalSize, FileEntry* file) {
-        return totalSize + file->size();
+    [](const long long size, FileEntry* file) {
+        return size + file->size();
     });
 
     return new CountTotalSizeResponse(totalSize);

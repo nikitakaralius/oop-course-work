@@ -10,7 +10,7 @@
 
 class CountDirectoriesResponse final : public IResponse {
 public:
-    explicit CountDirectoriesResponse(const int directoryCount)
+    explicit CountDirectoriesResponse(const size_t directoryCount)
         : _directoryCount(directoryCount) { }
 
     std::string toString() override {
@@ -20,7 +20,7 @@ public:
     }
 
 private:
-    int _directoryCount;
+    size_t _directoryCount;
 };
 
 #endif //COUNTDIRECTORIESRESPONSE_H
