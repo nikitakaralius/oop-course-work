@@ -8,7 +8,7 @@
 #include "../../Abstractions/IFileSystemEntry.h"
 
 
-class FileEntry final : IFileSystemEntry {
+class FileEntry final : public IFileSystemEntry {
 public:
     explicit FileEntry(const std::string&path);
 
