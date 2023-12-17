@@ -12,19 +12,19 @@
 
 
 class MiddlewarePipeline {
-private:
-    std::vector<IMiddleware*> middlewares;
-    RequestHandler* requestHandler;
-
 public:
-    explicit MiddlewarePipeline(RequestHandler* request_handler)
-        : requestHandler(request_handler) { }
+    explicit MiddlewarePipeline(RequestHandler* requestHandler)
+        : _requestHandler(requestHandler) { }
 
     ~MiddlewarePipeline();
 
     void use(IMiddleware* middleware);
 
     IResponse* process(IRequest& request);
+
+private:
+    std::vector<IMiddleware*> _middlewares;
+    RequestHandler* _requestHandler;
 };
 
 

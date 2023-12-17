@@ -5,25 +5,25 @@
 #include "MiddlewarePipeline.h"
 
 MiddlewarePipeline::~MiddlewarePipeline() {
-    for (const auto middleware : middlewares) {
+    for (const auto middleware : _middlewares) {
         delete middleware;
     }
 }
 
 void MiddlewarePipeline::use(IMiddleware* middleware) {
-    middlewares.push_back(middleware);
+    _middlewares.push_back(middleware);
 }
 
 IResponse* MiddlewarePipeline::process(IRequest& request) {
-    std::function finalHandler = [this](IRequest& r) {
-        return requestHandler->handleRequest(r);
+    std::function lastHandler = [this](IRequest& r) {
+        return _requestHandler->handleRequest(r);
     };
 
-    for (auto it = middlewares.rbegin(); it != middlewares.rend(); ++it) {
-        finalHandler = [this, middleware = *it, nextHandler = finalHandler](IRequest& r) {
+    for (auto it = _middlewares.rbegin(); it != _middlewares.rend(); ++it) {
+        lastHandler = [this, middleware = *it, nextHandler = lastHandler](IRequest& r) {
             return middleware->invoke(r, nextHandler);
         };
     }
 
-    return finalHandler(request);
+    return lastHandler(request);
 }

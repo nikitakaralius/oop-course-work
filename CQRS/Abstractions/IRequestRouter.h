@@ -6,7 +6,7 @@
 #define IREQUESTROUTER_H
 
 #include "IRequest.h"
-#include "IGenericRequestHandler.h"
+#include "IRequestHandler.h"
 
 class IRequestRouter {
 public:

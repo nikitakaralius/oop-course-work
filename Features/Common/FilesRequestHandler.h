@@ -6,7 +6,7 @@
 #define FILESREQUESTHANDLER_H
 
 #include "FilesRequest.h"
-#include "../../CQRS/Abstractions/IGenericRequestHandler.h"
+#include "../../CQRS/Abstractions/IRequestHandler.h"
 #include "../../FileSystem/Models/DirectoryEntry/DirectoryEntry.h"
 
 template<class TRequest, class TResponse>

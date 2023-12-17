@@ -7,7 +7,7 @@
 
 #include "CountDirectoriesRequest.h"
 #include "CountDirectoriesResponse.h"
-#include "../../CQRS/Abstractions/IGenericRequestHandler.h"
+#include "../../CQRS/Abstractions/IRequestHandler.h"
 #include "../../FileSystem/Models/DirectoryEntry/DirectoryEntry.h"
 
 

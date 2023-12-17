@@ -7,7 +7,7 @@
 
 #include "ExitRequest.h"
 #include "ExitResponse.h"
-#include "../../CQRS/Abstractions/IGenericRequestHandler.h"
+#include "../../CQRS/Abstractions/IRequestHandler.h"
 
 class ExitRequestHandler : public IGenericRequestHandler<ExitRequest, ExitResponse> {
 public:

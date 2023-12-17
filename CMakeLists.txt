@@ -8,7 +8,7 @@ add_executable(FileWizard main.cpp
         CQRS/Alias.h
         CQRS/Abstractions/IRequest.h
         CQRS/Abstractions/IRequest.h
-        CQRS/Abstractions/IGenericRequestHandler.h
+        CQRS/Abstractions/IRequestHandler.h
         CQRS/Abstractions/IMiddleware.h
         CQRS/Abstractions/IResponse.h
         CQRS/Abstractions/IRequestSender.h
