@@ -20,7 +20,7 @@ public:
 
     std::string name() override;
     long long size() override;
-    time_t createdAt() override;
+    time_t updatedAt() override;
 
     std::vector<DirectoryEntry*> subdirectories() const;
     std::vector<FileEntry*> files() const;

@@ -17,9 +17,9 @@ long long DirectoryEntry::size() {
     return size(path);
 }
 
-time_t DirectoryEntry::createdAt() {
+time_t DirectoryEntry::updatedAt() {
     fs::file_time_type lastWriteTime = fs::last_write_time(path);
-    return to_time_t(lastWriteTime);
+    return toTimeT(lastWriteTime);
 }
 
 std::vector<DirectoryEntry*> DirectoryEntry::subdirectories() const {

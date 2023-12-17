@@ -14,7 +14,7 @@ public:
 
     std::string name() override;
     long long size() override;
-    time_t createdAt() override;
+    time_t updatedAt() override;
 
     std::string getPath() const { return path;}
 

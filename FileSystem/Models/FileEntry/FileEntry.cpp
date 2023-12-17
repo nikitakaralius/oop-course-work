@@ -23,7 +23,7 @@ long long FileEntry::size() {
     return fs::file_size(path);
 }
 
-time_t FileEntry::createdAt() {
+time_t FileEntry::updatedAt() {
     auto lastWriteTime = fs::last_write_time(path);
-    return to_time_t(lastWriteTime);
+    return toTimeT(lastWriteTime);
 }

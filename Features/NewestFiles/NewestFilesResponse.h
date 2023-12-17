@@ -21,7 +21,7 @@ public:
         std::stringstream ss;
 
         for (const auto file : _newestFiles) {
-            time_t createdAt = file->createdAt();
+            time_t createdAt = file->updatedAt();
             ss << file->name() << " - " << std::ctime(&createdAt);
         }
 

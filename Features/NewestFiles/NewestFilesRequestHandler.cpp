@@ -13,7 +13,7 @@ NewestFilesResponse* NewestFilesRequestHandler::handleRequest(const NewestFilesR
         files,
         std::back_inserter(largestFiles),
         [timeThreshold](FileEntry* f) {
-            return f->createdAt() >= timeThreshold;
+            return f->updatedAt() >= timeThreshold;
         });
 
     return new NewestFilesResponse(largestFiles);
