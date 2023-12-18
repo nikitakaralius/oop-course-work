@@ -17,7 +17,9 @@ namespace fs = std::filesystem;
 
 class DirectoryEntry final : public IFileSystemEntry {
 public:
-    explicit DirectoryEntry(std::string path) : path(std::move(path)) {
+    explicit DirectoryEntry(std::string path) {
+        _path = path;
+
         if (!fs::exists(path))
             throw DirectoryNotFoundException("Директория " + path + " не существует");
     }
@@ -30,7 +32,7 @@ public:
     std::vector<FileEntry*> files() const;
 
 private:
-    std::string path;
+    std::string _path;
 
     long long size(const fs::path& directoryPath) const;
 };
