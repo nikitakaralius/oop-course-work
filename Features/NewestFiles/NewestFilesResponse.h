@@ -14,8 +14,16 @@ class FileEntry;
 
 class NewestFilesResponse final : public IResponse {
 public:
-    explicit NewestFilesResponse(const std::vector<FileEntry*>& newestFiles)
-        : _newestFiles(newestFiles) {  }
+    explicit NewestFilesResponse(
+        const std::vector<FileEntry*>& newestFiles,
+        const std::vector<FileEntry*>& allFiles)
+        : _newestFiles(newestFiles),
+          _allFiles(allFiles) {  }
+
+    ~NewestFilesResponse() override {
+        for (const auto file : _allFiles)
+            delete file;
+    }
 
     std::string toString() override {
         std::stringstream ss;
@@ -30,6 +38,7 @@ public:
 
 private:
     std::vector<FileEntry*> _newestFiles;
+    std::vector<FileEntry*> _allFiles;
 };
 
 #endif //NEWESTFILESRESPONSE_H

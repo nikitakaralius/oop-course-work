@@ -11,8 +11,16 @@
 
 class FindDuplicatesResponse final : public IResponse {
 public:
-    explicit FindDuplicatesResponse(const std::vector<FileEntry*>& duplicateFiles)
-    : _duplicateFiles(duplicateFiles) {  }
+    explicit FindDuplicatesResponse(
+        const std::vector<FileEntry*>& duplicateFiles,
+        const std::vector<FileEntry*>& allFiles)
+    : _duplicateFiles(duplicateFiles),
+      _allFiles(allFiles){  }
+
+    ~FindDuplicatesResponse() override {
+        for (const auto file : _allFiles)
+            delete file;
+    }
 
     std::string toString() override {
         std::stringstream ss;
@@ -25,6 +33,7 @@ public:
 
 private:
     std::vector<FileEntry*> _duplicateFiles;
+    std::vector<FileEntry*> _allFiles;
 };
 
 #endif //FINDDUPLICATESRESPONSE_H

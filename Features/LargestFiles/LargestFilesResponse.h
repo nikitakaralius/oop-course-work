@@ -11,8 +11,16 @@
 
 class LargestFilesResponse final : public IResponse {
 public:
-    explicit LargestFilesResponse(const std::vector<FileEntry*>&largestFiles)
-        : _largestFiles(largestFiles) {  }
+    explicit LargestFilesResponse(
+        const std::vector<FileEntry*>& largestFiles,
+        const std::vector<FileEntry*>& allFiles)
+        : _largestFiles(largestFiles),
+          _allFiles(allFiles){  }
+
+    ~LargestFilesResponse() override {
+        for (const auto file : _allFiles)
+            delete file;
+    }
 
     std::string toString() override {
         std::stringstream ss;
@@ -25,6 +33,7 @@ public:
 
 private:
     std::vector<FileEntry*> _largestFiles;
+    std::vector<FileEntry*> _allFiles;
 };
 
 #endif //LARGESTFILESRESPONSE_H
