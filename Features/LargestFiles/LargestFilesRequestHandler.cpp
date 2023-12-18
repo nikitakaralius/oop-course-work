@@ -16,5 +16,5 @@ LargestFilesResponse* LargestFilesRequestHandler::handleRequest(const LargestFil
             return f->size() >= sizeThreshold;
         });
 
-    return new LargestFilesResponse(largestFiles);
+    return new LargestFilesResponse(largestFiles, files);
 }

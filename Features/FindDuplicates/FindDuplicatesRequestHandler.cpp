@@ -16,5 +16,5 @@ FindDuplicatesResponse* FindDuplicatesRequestHandler::handleRequest(const FindDu
             return f->name() == targetFile.name() && f->size() == targetFile.size();
         });
 
-    return new FindDuplicatesResponse(duplicateFiles);
+    return new FindDuplicatesResponse(duplicateFiles, files);
 }

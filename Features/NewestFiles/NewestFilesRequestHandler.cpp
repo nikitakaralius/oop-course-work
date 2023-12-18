@@ -16,5 +16,5 @@ NewestFilesResponse* NewestFilesRequestHandler::handleRequest(const NewestFilesR
             return f->updatedAt() >= timeThreshold;
         });
 
-    return new NewestFilesResponse(largestFiles);
+    return new NewestFilesResponse(largestFiles, files);
 }
