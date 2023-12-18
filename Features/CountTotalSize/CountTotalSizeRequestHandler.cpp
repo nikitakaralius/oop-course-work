@@ -16,5 +16,8 @@ CountTotalSizeResponse* CountTotalSizeRequestHandler::handleRequest(const CountT
         return size + file->size();
     });
 
+    for (const auto file : files)
+        delete file;
+
     return new CountTotalSizeResponse(totalSize);
 }

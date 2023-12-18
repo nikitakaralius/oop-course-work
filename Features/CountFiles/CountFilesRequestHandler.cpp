@@ -7,5 +7,9 @@
 CountFilesResponse* CountFilesRequestHandler::handleRequest(const CountFilesRequest& request) {
     const auto files = retrieveFilesRecursively(request);
     const auto response =  new CountFilesResponse(files.size());
+
+    for (const auto file : files)
+        delete file;
+
     return response;
 }
