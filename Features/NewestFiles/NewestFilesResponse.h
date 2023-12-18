@@ -15,8 +15,8 @@ class FileEntry;
 class NewestFilesResponse final : public IResponse {
 public:
     explicit NewestFilesResponse(
-        const std::vector<FileEntry*>& newestFiles,
-        const std::vector<FileEntry*>& allFiles)
+        const std::vector<FileEntry*> newestFiles,
+        const std::vector<FileEntry*> allFiles)
         : _newestFiles(newestFiles),
           _allFiles(allFiles) {  }
 

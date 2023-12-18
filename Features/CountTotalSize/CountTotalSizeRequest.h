@@ -11,7 +11,7 @@
 class CountTotalSizeRequest final : public FilesRequest {
 public:
     CountTotalSizeRequest(
-        const std::string& directoryPath,
+        const std::string directoryPath,
         const int maxDepthLevel)
         : FilesRequest(directoryPath, maxDepthLevel) { }
 

@@ -12,8 +12,8 @@
 class FindDuplicatesResponse final : public IResponse {
 public:
     explicit FindDuplicatesResponse(
-        const std::vector<FileEntry*>& duplicateFiles,
-        const std::vector<FileEntry*>& allFiles)
+        const std::vector<FileEntry*> duplicateFiles,
+        const std::vector<FileEntry*> allFiles)
     : _duplicateFiles(duplicateFiles),
       _allFiles(allFiles){  }
 

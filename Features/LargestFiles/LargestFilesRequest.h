@@ -11,7 +11,7 @@
 class LargestFilesRequest final : public FilesRequest {
 public:
     LargestFilesRequest(
-        const std::string&directoryPath,
+        const std::string directoryPath,
         const int maxDepthLevel,
         const long long sizeThreshold)
         : FilesRequest(directoryPath, maxDepthLevel),

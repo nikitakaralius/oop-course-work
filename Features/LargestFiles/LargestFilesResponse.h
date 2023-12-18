@@ -12,8 +12,8 @@
 class LargestFilesResponse final : public IResponse {
 public:
     explicit LargestFilesResponse(
-        const std::vector<FileEntry*>& largestFiles,
-        const std::vector<FileEntry*>& allFiles)
+        const std::vector<FileEntry*> largestFiles,
+        const std::vector<FileEntry*> allFiles)
         : _largestFiles(largestFiles),
           _allFiles(allFiles){  }
 

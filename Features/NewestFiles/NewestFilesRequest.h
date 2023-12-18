@@ -10,7 +10,7 @@
 class NewestFilesRequest final : public FilesRequest {
 public:
     NewestFilesRequest(
-        const std::string& directoryPath,
+        const std::string directoryPath,
         const int maxDepthLevel,
         const time_t timeThreshold)
         : FilesRequest(directoryPath, maxDepthLevel),

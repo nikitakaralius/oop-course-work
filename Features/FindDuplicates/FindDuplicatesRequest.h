@@ -11,7 +11,7 @@
 class FindDuplicatesRequest final : public FilesRequest {
 public:
     FindDuplicatesRequest(
-        const std::string& directoryPath,
+        const std::string directoryPath,
         const int maxDepthLevel,
         std::string targetFilePath)
         : FilesRequest(directoryPath, maxDepthLevel),

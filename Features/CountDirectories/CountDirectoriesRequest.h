@@ -11,7 +11,7 @@
 class CountDirectoriesRequest final : public FilesRequest {
 public:
     explicit CountDirectoriesRequest(
-        const std::string& directoryPath,
+        const std::string directoryPath,
         const int maxDepthLevel)
         : FilesRequest(directoryPath, maxDepthLevel) { }
 
