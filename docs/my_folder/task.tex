@@ -1,0 +1,61 @@
+%%%% Начало оформления заголовка - оставить без изменений !!! %%%%
+\input{my_folder/task_settings}	% настройки - начало 
+	
+				{\normalfont %2020
+						\MakeUppercase{\SPbPU}}\\
+				\institute\\
+				\highSchool
+
+\par}\intervalS% завершает input
+
+				
+				
+
+\intervalS{\centering\bfseries%
+
+				ЗАДАНИЕ\\
+\intervalS\normalfont%
+				на выполнение курсовой работы по дисциплине\\
+				<<Технология объектно-ориентированного программирования>>
+
+\par}\intervalS%
+
+студенту \uline{\AuthorFullDat{}} \hfill группа: \uline{~\group}\\
+семестр: \uline{3}
+\intervalS
+%%%%
+%%%% Конец оформления заголовка  %%%%
+ 	
+	
+	
+\begin{enumerate}[1.]
+	\item Тема работы: {\expandafter \ulined \thesisTitle.}
+	\item Срок сдачи студентом законченной работы: \uline{\thesisDeadline.} 
+	\item Исходные данные по работе: \uline{материалы по курсу <<Технология объектно-ориентированного программирования>>.}%
+	%\printbibliographyTask % печать списка источников % КОММЕНТИРУЕМ ЕСЛИ НЕ ИСПОЛЬЗУЕТСЯ
+	% В СЛУЧАЕ, ЕСЛИ НЕ ИСПОЛЬЗУЕТСЯ МОЖНО ТАКЖЕ ЗАЙТИ В setup.tex и закомментировать \vspace{-0.28\curtextsize}
+	\item Содержание работы (перечень подлежащих разработке вопросов):
+	\begin{enumerate}[label=\theenumi\arabic*.]
+		\item Проектирование приложения для анализа файловой системы.
+		\item Реализация функционала.
+	\end{enumerate}
+	\item Перечень графического материала (с указанием обязательных рисунков): 
+	\begin{enumerate}[label=\theenumi\arabic*.]
+		\item Диаграмма классов UML.
+		\item Диаграммы IDEF0 порядка выполнения программы.
+	\end{enumerate}		
+	\item Дата выдачи задания: \uline{\thesisStartDate.}
+\end{enumerate}
+
+\intervalS%можно удалить пробел
+
+\noindent
+\begin{tabularx}{\linewidth}{lXl}
+	Cтудент      &    & \Author     \\[\mfloatsep]
+	
+	Преподаватель     &    & \Supervisor     \\[\mfloatsep]
+	
+\end{tabularx} %
+
+
+\input{my_folder/task_settings_restore}	% настройки - конец

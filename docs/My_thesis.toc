@@ -1,0 +1,23 @@
+\changetocdepth {2}
+\babel@toc {russian}{}\relax 
+\contentsline {chapter}{Введение}{4}{chapter*.2}%
+\contentsline {chapter}{\chapternumberline {1}Проектирование}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Анализ требований}{5}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Выбор архитектуры}{6}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Проектирование интерфейса взаимодействия с файловой системой}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Проектирование CQRS библиотеки}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Проектирование инфраструктурных сервисов}{9}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Проектирование обработчиков запросов}{10}{section.1.6}%
+\contentsline {chapter}{\chapternumberline {2}Реализация функционала}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Реализазция интерфейса взаимодействия с файловой системой}{11}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Реализация CQRS библиотеки}{11}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Реализация инфраструктурных сервисов}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Связывание компонентов системы}{13}{section.2.4}%
+\contentsline {chapter}{Заключение}{14}{chapter*.5}%
+\contentsline {chapter}{Список использованных источников}{15}{chapter*.6}%
+\changetocdepth {0}
+\contentsline {chapter}{Приложение{} 1. Графический материал}{16}{appendix*.7}%
+\contentsline {section}{\numberline {П1.1}Диаграмма классов UML}{16}{section.A.1}%
+\contentsline {section}{\numberline {П1.2}Диаграммы IDEF0}{21}{section.A.2}%
+\changetocdepth {0}
+\contentsline {chapter}{Приложение{} 2. Программный код}{22}{appendix*.15}%
