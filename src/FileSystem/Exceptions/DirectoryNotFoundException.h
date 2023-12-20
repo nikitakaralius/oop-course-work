@@ -4,6 +4,7 @@
 
 #ifndef DIRECTORYNOTFOUNDEXCEPTION_H
 #define DIRECTORYNOTFOUNDEXCEPTION_H
+
 #include "ApplicationException.h"
 
 class DirectoryNotFoundException final : public ApplicationException {

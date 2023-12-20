@@ -4,6 +4,7 @@
 
 #ifndef APPLICATIONEXCEPTION_H
 #define APPLICATIONEXCEPTION_H
+
 #include <exception>
 #include <string>
 

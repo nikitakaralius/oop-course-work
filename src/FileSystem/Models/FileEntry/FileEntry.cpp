@@ -2,8 +2,9 @@
 // Created by Nikita Karalyus on 16/12/2023.
 //
 
-#include "FileEntry.h"
 #include <filesystem>
+
+#include "FileEntry.h"
 #include "../../Exceptions/FileNotFoundException.h"
 
 namespace fs = std::filesystem;

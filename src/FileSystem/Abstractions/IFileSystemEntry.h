@@ -7,7 +7,6 @@
 
 #include <vector>
 #include <chrono>
-
 #include <string>
 
 class IFileSystemEntry {

@@ -6,12 +6,10 @@
 #define FILEENTRY_H
 
 #include "../../Abstractions/IFileSystemEntry.h"
-#include <vector>
-
 
 class FileEntry final : public IFileSystemEntry {
 public:
-    explicit FileEntry(const std::string&path);
+    explicit FileEntry(const std::string& path);
 
     std::string name() override;
     long long size() override;

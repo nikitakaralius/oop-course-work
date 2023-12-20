@@ -5,7 +5,6 @@
 #ifndef DIRECTORYENTRY_H
 #define DIRECTORYENTRY_H
 
-#include <utility>
 #include <filesystem>
 #include <vector>
 
@@ -18,7 +17,7 @@ namespace fs = std::filesystem;
 
 class DirectoryEntry final : public IFileSystemEntry {
 public:
-    explicit DirectoryEntry(std::string path) {
+    explicit DirectoryEntry(const std::string& path) {
         _path = path;
 
         if (!fs::exists(path))

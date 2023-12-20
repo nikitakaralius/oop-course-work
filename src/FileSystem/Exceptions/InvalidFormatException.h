@@ -4,6 +4,7 @@
 
 #ifndef INVALIDFORMATEXCEPTION_H
 #define INVALIDFORMATEXCEPTION_H
+
 #include "ApplicationException.h"
 
 class InvalidFormatException final : public ApplicationException {

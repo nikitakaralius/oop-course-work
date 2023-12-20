@@ -5,7 +5,6 @@
 #ifndef FILENOTFOUNDEXCEPTION_H
 #define FILENOTFOUNDEXCEPTION_H
 
-
 #include "ApplicationException.h"
 
 class FileNotFoundException final : public ApplicationException {
