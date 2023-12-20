@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copy the CMakeLists.txt and the source code of the application to the working directory
 COPY CMakeLists.txt /app
-COPY . /app
+COPY /isrc /app
 
 # Run CMake to create the build files
 RUN cmake .
