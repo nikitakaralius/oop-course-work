@@ -7,6 +7,8 @@
 
 #include <sstream>
 #include "../../CQRS/Abstractions/IResponse.h"
+#include <vector>
+
 
 class CountTotalSizeResponse final : public IResponse {
 public:

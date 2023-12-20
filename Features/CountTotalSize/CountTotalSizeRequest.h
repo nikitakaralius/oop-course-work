@@ -5,6 +5,8 @@
 #ifndef COUNTTOTALSIZEREQUEST_H
 #define COUNTTOTALSIZEREQUEST_H
 
+#include <vector>
+
 #include <sstream>
 #include "../Common/FilesRequest.h"
 

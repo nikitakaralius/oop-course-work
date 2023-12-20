@@ -7,6 +7,7 @@
 
 #include <utility>
 #include <filesystem>
+#include <vector>
 
 #include "../../Abstractions/IFileSystemEntry.h"
 #include "../../Exceptions/DirectoryNotFoundException.h"

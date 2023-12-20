@@ -7,6 +7,8 @@
 
 #include <utility>
 #include "../Common/FilesRequest.h"
+#include <vector>
+
 
 class FindDuplicatesRequest final : public FilesRequest {
 public:

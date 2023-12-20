@@ -4,6 +4,8 @@
 
 #include "CountTotalSizeRequestHandler.h"
 #include <numeric>
+#include <vector>
+
 
 CountTotalSizeResponse* CountTotalSizeRequestHandler::handleRequest(const CountTotalSizeRequest& request) {
     auto files = retrieveFilesRecursively(request);

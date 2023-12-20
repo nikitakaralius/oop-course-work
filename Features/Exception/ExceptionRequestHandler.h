@@ -8,6 +8,8 @@
 #include "ExceptionResponse.h"
 #include "ExpcetionRequest.h"
 #include "../../CQRS/Abstractions/IRequestHandler.h"
+#include <vector>
+
 
 class ExceptionRequestHandler final :
         public IGenericRequestHandler<

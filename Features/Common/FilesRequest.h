@@ -6,6 +6,7 @@
 #define FILESREQUEST_H
 
 #include <sstream>
+#include <climits>
 #include "../../CQRS/Abstractions/IRequest.h"
 
 class FilesRequest : public IRequest {

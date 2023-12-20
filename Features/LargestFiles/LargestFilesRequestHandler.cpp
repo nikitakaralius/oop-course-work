@@ -3,6 +3,10 @@
 //
 
 #include "LargestFilesRequestHandler.h"
+#include <vector>
+#include <ranges>
+#include <algorithm>
+
 
 LargestFilesResponse* LargestFilesRequestHandler::handleRequest(const LargestFilesRequest&request) {
     auto files = retrieveFilesRecursively(request);

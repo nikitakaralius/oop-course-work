@@ -3,6 +3,8 @@
 //
 
 #include "CountFilesRequestHandler.h"
+#include <vector>
+
 
 CountFilesResponse* CountFilesRequestHandler::handleRequest(const CountFilesRequest& request) {
     const auto files = retrieveFilesRecursively(request);

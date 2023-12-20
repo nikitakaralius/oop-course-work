@@ -8,6 +8,8 @@
 #include "FindDuplicatesRequest.h"
 #include "FindDuplicatesResponse.h"
 #include "../Common/FilesRequestHandler.h"
+#include <vector>
+
 
 
 class FindDuplicatesRequestHandler final :

@@ -5,6 +5,8 @@
 #ifndef COUNTFILESREQUESTHANDLER_H
 #define COUNTFILESREQUESTHANDLER_H
 
+#include <vector>
+
 #include "CountFilesRequest.h"
 #include "CountFilesResponse.h"
 #include "../Common/FilesRequestHandler.h"

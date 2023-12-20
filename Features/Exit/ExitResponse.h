@@ -5,6 +5,8 @@
 #ifndef EXITRESPONSE_H
 #define EXITRESPONSE_H
 #include "../../CQRS/Abstractions/IResponse.h"
+#include <vector>
+
 
 class ExitResponse final : public IResponse {
 public:

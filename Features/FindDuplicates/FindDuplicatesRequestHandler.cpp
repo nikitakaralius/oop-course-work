@@ -3,6 +3,10 @@
 //
 
 #include "FindDuplicatesRequestHandler.h"
+#include <vector>
+#include <ranges>
+#include <algorithm>
+
 
 FindDuplicatesResponse* FindDuplicatesRequestHandler::handleRequest(const FindDuplicatesRequest& request) {
     auto files = retrieveFilesRecursively(request);

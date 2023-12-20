@@ -5,6 +5,8 @@
 #ifndef COUNTDIRECTORIESREQUESTHANDLER_H
 #define COUNTDIRECTORIESREQUESTHANDLER_H
 
+#include <vector>
+
 #include "CountDirectoriesRequest.h"
 #include "CountDirectoriesResponse.h"
 #include "../../CQRS/Abstractions/IRequestHandler.h"

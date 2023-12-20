@@ -4,6 +4,7 @@
 
 #ifndef COUNTDIRECTORIESRESPONSE_H
 #define COUNTDIRECTORIESRESPONSE_H
+#include <vector>
 
 #include <sstream>
 #include "../../CQRS/Abstractions/IResponse.h"

@@ -5,6 +5,8 @@
 #ifndef EXITREQUEST_H
 #define EXITREQUEST_H
 #include "../../CQRS/Abstractions/IRequest.h"
+#include <vector>
+
 
 class ExitRequest final : public IRequest {
 public:

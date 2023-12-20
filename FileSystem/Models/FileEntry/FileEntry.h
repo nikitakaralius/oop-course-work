@@ -6,6 +6,7 @@
 #define FILEENTRY_H
 
 #include "../../Abstractions/IFileSystemEntry.h"
+#include <vector>
 
 
 class FileEntry final : public IFileSystemEntry {

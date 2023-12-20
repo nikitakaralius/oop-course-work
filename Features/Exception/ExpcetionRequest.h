@@ -6,6 +6,8 @@
 #define EXPCETIONREQUEST_H
 
 #include "../../CQRS/Abstractions/IRequest.h"
+#include <vector>
+
 
 class ExceptionRequest final : public IRequest {
 public:

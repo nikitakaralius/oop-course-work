@@ -7,6 +7,8 @@
 #include "NewestFilesRequest.h"
 #include "NewestFilesResponse.h"
 #include "../Common/FilesRequestHandler.h"
+#include <vector>
+
 
 
 class NewestFilesRequestHandler final :

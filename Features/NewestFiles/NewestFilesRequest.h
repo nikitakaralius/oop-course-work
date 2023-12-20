@@ -6,6 +6,8 @@
 #define NEWESTFILESREQUEST_H
 
 #include "../Common/FilesRequest.h"
+#include <vector>
+
 
 class NewestFilesRequest final : public FilesRequest {
 public:

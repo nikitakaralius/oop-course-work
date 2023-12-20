@@ -9,6 +9,8 @@
 
 #include "../../CQRS/Abstractions/IResponse.h"
 #include "../../FileSystem/Models/FileEntry/FileEntry.h"
+#include <vector>
+
 
 class FileEntry;
 

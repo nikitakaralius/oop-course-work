@@ -6,6 +6,7 @@
 
 #include <iomanip>
 #include <iostream>
+#include <climits>
 
 #include "../../../Features/Exception/ExceptionResponse.h"
 #include "../../../Features/Exception/ExpcetionRequest.h"

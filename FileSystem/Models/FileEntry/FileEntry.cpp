@@ -3,7 +3,7 @@
 //
 
 #include "FileEntry.h"
-#include <__filesystem/operations.h>
+#include <filesystem>
 #include "../../Exceptions/FileNotFoundException.h"
 
 namespace fs = std::filesystem;

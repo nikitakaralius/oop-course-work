@@ -5,6 +5,8 @@
 #ifndef COUNTFILESRESPONSE_H
 #define COUNTFILESRESPONSE_H
 
+#include <vector>
+
 #include <sstream>
 #include "../../CQRS/Abstractions/IResponse.h"
 

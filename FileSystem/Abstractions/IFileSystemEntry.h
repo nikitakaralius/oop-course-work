@@ -5,6 +5,9 @@
 #ifndef IFILESYSTEMENTRY_H
 #define IFILESYSTEMENTRY_H
 
+#include <vector>
+#include <chrono>
+
 #include <string>
 
 class IFileSystemEntry {

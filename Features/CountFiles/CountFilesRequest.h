@@ -5,6 +5,8 @@
 #ifndef COUNTFILESREQUEST_H
 #define COUNTFILESREQUEST_H
 
+#include <vector>
+
 #include <sstream>
 #include "../Common/FilesRequest.h"
 

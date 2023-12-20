@@ -3,6 +3,10 @@
 //
 
 #include "NewestFilesRequestHandler.h"
+#include <vector>
+#include <ranges>
+#include <algorithm>
+
 
 NewestFilesResponse* NewestFilesRequestHandler::handleRequest(const NewestFilesRequest& request) {
     auto files = retrieveFilesRecursively(request);
