@@ -6,13 +6,9 @@
 #define NEWESTFILESRESPONSE_H
 
 #include <sstream>
-
+#include <vector>
 #include "../../CQRS/Abstractions/IResponse.h"
 #include "../../FileSystem/Models/FileEntry/FileEntry.h"
-#include <vector>
-
-
-class FileEntry;
 
 class NewestFilesResponse final : public IResponse {
 public:

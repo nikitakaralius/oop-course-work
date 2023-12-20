@@ -4,9 +4,10 @@
 
 #ifndef COUNTDIRECTORIESRESPONSE_H
 #define COUNTDIRECTORIESRESPONSE_H
-#include <vector>
 
+#include <vector>
 #include <sstream>
+
 #include "../../CQRS/Abstractions/IResponse.h"
 
 class CountDirectoriesResponse final : public IResponse {

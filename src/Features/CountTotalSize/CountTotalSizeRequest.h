@@ -6,14 +6,14 @@
 #define COUNTTOTALSIZEREQUEST_H
 
 #include <vector>
-
 #include <sstream>
+
 #include "../Common/FilesRequest.h"
 
 class CountTotalSizeRequest final : public FilesRequest {
 public:
     CountTotalSizeRequest(
-        const std::string directoryPath,
+        const std::string& directoryPath,
         const int maxDepthLevel)
         : FilesRequest(directoryPath, maxDepthLevel) { }
 

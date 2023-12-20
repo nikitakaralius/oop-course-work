@@ -6,8 +6,8 @@
 #define COUNTFILESRESPONSE_H
 
 #include <vector>
-
 #include <sstream>
+
 #include "../../CQRS/Abstractions/IResponse.h"
 
 class CountFilesResponse final : public IResponse {

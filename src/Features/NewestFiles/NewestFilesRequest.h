@@ -6,13 +6,11 @@
 #define NEWESTFILESREQUEST_H
 
 #include "../Common/FilesRequest.h"
-#include <vector>
-
 
 class NewestFilesRequest final : public FilesRequest {
 public:
     NewestFilesRequest(
-        const std::string directoryPath,
+        const std::string& directoryPath,
         const int maxDepthLevel,
         const time_t timeThreshold)
         : FilesRequest(directoryPath, maxDepthLevel),

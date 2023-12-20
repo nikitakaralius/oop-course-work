@@ -4,8 +4,8 @@
 
 #include <vector>
 #include <filesystem>
-#include "CountDirectoriesRequestHandler.h"
 
+#include "CountDirectoriesRequestHandler.h"
 #include "../../FileSystem/Models/DirectoryEntry/DirectoryEntry.h"
 
 namespace fs = std::filesystem;

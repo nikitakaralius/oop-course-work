@@ -6,8 +6,8 @@
 #define FINDDUPLICATESREQUEST_H
 
 #include <utility>
-#include "../Common/FilesRequest.h"
 #include <vector>
+#include "../Common/FilesRequest.h"
 
 
 class FindDuplicatesRequest final : public FilesRequest {

@@ -8,9 +8,6 @@
 #include "LargestFilesRequest.h"
 #include "LargestFilesResponse.h"
 #include "../Common/FilesRequestHandler.h"
-#include <vector>
-
-
 
 class LargestFilesRequestHandler final :
         public FilesRequestHandler<

@@ -6,9 +6,9 @@
 #define FINDDUPLICATESRESPONSE_H
 
 #include <sstream>
+#include <vector>
 #include "../../CQRS/Abstractions/IResponse.h"
 #include "../../FileSystem/Models/FileEntry/FileEntry.h"
-#include <vector>
 
 
 class FindDuplicatesResponse final : public IResponse {

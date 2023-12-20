@@ -6,8 +6,8 @@
 #define COUNTTOTALSIZERESPONSE_H
 
 #include <sstream>
-#include "../../CQRS/Abstractions/IResponse.h"
 #include <vector>
+#include "../../CQRS/Abstractions/IResponse.h"
 
 
 class CountTotalSizeResponse final : public IResponse {

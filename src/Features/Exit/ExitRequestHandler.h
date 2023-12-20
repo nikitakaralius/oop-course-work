@@ -8,8 +8,6 @@
 #include "ExitRequest.h"
 #include "ExitResponse.h"
 #include "../../CQRS/Abstractions/IRequestHandler.h"
-#include <vector>
-
 
 class ExitRequestHandler final : public IGenericRequestHandler<ExitRequest, ExitResponse> {
 public:

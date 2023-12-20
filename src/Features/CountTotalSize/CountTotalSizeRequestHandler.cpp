@@ -3,6 +3,7 @@
 //
 
 #include "CountTotalSizeRequestHandler.h"
+
 #include <numeric>
 #include <vector>
 

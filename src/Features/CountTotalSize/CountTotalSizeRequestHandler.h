@@ -8,9 +8,6 @@
 #include "CountTotalSizeRequest.h"
 #include "CountTotalSizeResponse.h"
 #include "../Common/FilesRequestHandler.h"
-#include <vector>
-
-
 
 class CountTotalSizeRequestHandler final :
         public FilesRequestHandler<

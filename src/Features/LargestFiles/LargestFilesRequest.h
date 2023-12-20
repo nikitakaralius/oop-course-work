@@ -7,8 +7,6 @@
 
 
 #include "../Common/FilesRequest.h"
-#include <vector>
-
 
 class LargestFilesRequest final : public FilesRequest {
 public:

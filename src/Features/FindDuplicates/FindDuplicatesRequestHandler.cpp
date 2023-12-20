@@ -2,10 +2,10 @@
 // Created by Nikita Karalyus on 16/12/2023.
 //
 
-#include "FindDuplicatesRequestHandler.h"
 #include <vector>
 #include <ranges>
 #include <algorithm>
+#include "FindDuplicatesRequestHandler.h"
 
 
 FindDuplicatesResponse* FindDuplicatesRequestHandler::handleRequest(const FindDuplicatesRequest& request) {
