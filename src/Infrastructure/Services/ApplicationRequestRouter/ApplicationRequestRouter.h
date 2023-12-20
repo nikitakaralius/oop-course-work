@@ -8,7 +8,7 @@
 #include "../../../CQRS/Abstractions/IRequestRouter.h"
 
 
-class ApplicationRequestRouter : public IRequestRouter {
+class ApplicationRequestRouter final : public IRequestRouter {
 public:
     IRequestHandler* getHandler(IRequest& request) override;
 };

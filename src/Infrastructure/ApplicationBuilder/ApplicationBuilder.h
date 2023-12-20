@@ -4,6 +4,7 @@
 
 #ifndef APPLICATIONBUILDER_H
 #define APPLICATIONBUILDER_H
+
 #include "../../CQRS/Abstractions/IRequestRouter.h"
 #include "../Abstractions/IUserInteractor.h"
 #include "../Application/Application.h"
