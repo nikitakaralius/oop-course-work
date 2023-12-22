@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.17)  18 DEC 2023 19:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.17)  22 DEC 2023 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3243,7 +3243,15 @@ File: t2atempora-tlf.fd 2015/09/13 Font definitions for T2A/Tempora-TLF.
 )
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 14.05249pt on input line 23.
-<<t2a.cmap>>)
+<<t2a.cmap>>
+\c@mypages@totc=\count727
+\c@TotPages@totc=\count728
+\c@myfigures@totc=\count729
+\c@mytotalfigures@totc=\count730
+\c@mytables@totc=\count731
+\c@mytotaltables@totc=\count732
+\c@myappendices@totc=\count733
+)
 \openout1 = `My_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 34.
@@ -3338,16 +3346,16 @@ Package nag Info: Command \RaggedRight not defined, skipping amendment on input
 
 (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count727
+\scratchcounter=\count734
 \scratchdimen=\dimen353
 \scratchbox=\box137
-\nofMPsegments=\count728
-\nofMParguments=\count729
+\nofMPsegments=\count735
+\nofMParguments=\count736
 \everyMPshowfont=\toks70
-\MPscratchCnt=\count730
+\MPscratchCnt=\count737
 \MPscratchDim=\dimen354
-\MPnumerator=\count731
-\makeMPintoPDFobject=\count732
+\MPnumerator=\count738
+\makeMPintoPDFobject=\count739
 \everyMPtoPDFconversion=\toks71
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -3395,8 +3403,8 @@ e
 LaTeX Info: Command `\dddot' is already robust on input line 34.
 LaTeX Info: Command `\ddddot' is already robust on input line 34.
 LaTeX Info: Redefining \th on input line 34.
-\c@mv@tabular=\count733
-\c@mv@boldtabular=\count734
+\c@mv@tabular=\count740
+\c@mv@boldtabular=\count741
 Package hyperref Info: Link coloring OFF on input line 34.
 (./My_thesis.out) (./My_thesis.out)
 \@outlinefile=\write8
@@ -3409,7 +3417,7 @@ Package caption Info: End \AtBeginDocument code.
 
 Package layouts Warning: Layout scale set to 0.5 on input line 34.
 
-\c@lstlisting=\count735
+\c@lstlisting=\count742
 LaTeX Info: Redefining \microtypecontext on input line 34.
 Package microtype Info: Applying patch `item' on input line 34.
 Package microtype Info: Applying patch `toc' on input line 34.
@@ -3478,13 +3486,6 @@ Package biblatex Info: ... file 'My_thesis.bbl' found.
 (./My_thesis.bbl)
 Package biblatex Info: Reference section=0 on input line 34.
 Package biblatex Info: Reference segment=0 on input line 34.
-\c@mypages@totc=\count736
-\c@TotPages@totc=\count737
-\c@myfigures@totc=\count738
-\c@mytotalfigures@totc=\count739
-\c@mytables@totc=\count740
-\c@mytotaltables@totc=\count741
-\c@myappendices@totc=\count742
 Package nag Info: Command \captionabove not defined, skipping amendment on inpu
 t line 34.
 Package nag Info: Command \captionbelow not defined, skipping amendment on inpu
@@ -3620,14 +3621,14 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
 [4.4
 
 ]
-<my_folder/images/IDEF.png, id=94, 1746.525pt x 972.63374pt>
+<my_folder/images/IDEF.png, id=97, 1746.525pt x 972.63374pt>
 File: my_folder/images/IDEF.png Graphic file (type png)
 <use my_folder/images/IDEF.png>
 Package pdftex.def Info: my_folder/images/IDEF.png  used on input line 12.
 (pdftex.def)             Requested size: 296.90532pt x 165.34555pt.
 LaTeX Font Info:    Font shape `T2A/Tempora-TLF/m/n' will be
 (Font)              scaled to size 12.0pt on input line 13.
-<my_folder/images/IDEF0_A0.png, id=96, 2860.6875pt x 1719.42375pt>
+<my_folder/images/IDEF0_A0.png, id=99, 2860.6875pt x 1719.42375pt>
 File: my_folder/images/IDEF0_A0.png Graphic file (type png)
 <use my_folder/images/IDEF0_A0.png>
 Package pdftex.def Info: my_folder/images/IDEF0_A0.png  used on input line 26.
@@ -3858,7 +3859,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
 
 
 ] (./my_folder/appendix1.tex
-<my_folder/images/uml2.png, id=170, 1068.49188pt x 613.29124pt>
+<my_folder/images/uml2.png, id=173, 1068.49188pt x 613.29124pt>
 File: my_folder/images/uml2.png Graphic file (type png)
 <use my_folder/images/uml2.png>
 Package pdftex.def Info: my_folder/images/uml2.png  used on input line 6.
@@ -3876,7 +3877,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
 [16.16
 
  <./my_folder/images/uml2.png>]
-<my_folder/images/uml4.png, id=178, 1177.90062pt x 1154.81438pt>
+<my_folder/images/uml4.png, id=181, 1177.90062pt x 1154.81438pt>
 File: my_folder/images/uml4.png Graphic file (type png)
 <use my_folder/images/uml4.png>
 Package pdftex.def Info: my_folder/images/uml4.png  used on input line 12.
@@ -3892,7 +3893,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
 
 [17.17 <./my_folder/images/uml4.png>]
-<my_folder/images/uml5.png, id=184, 1263.21938pt x 885.3075pt>
+<my_folder/images/uml5.png, id=187, 1263.21938pt x 885.3075pt>
 File: my_folder/images/uml5.png Graphic file (type png)
 <use my_folder/images/uml5.png>
 Package pdftex.def Info: my_folder/images/uml5.png  used on input line 18.
@@ -3908,7 +3909,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
 
 [18.18 <./my_folder/images/uml5.png>]
-<my_folder/images/uml6.png, id=190, 767.36688pt x 954.56625pt>
+<my_folder/images/uml6.png, id=193, 767.36688pt x 954.56625pt>
 File: my_folder/images/uml6.png Graphic file (type png)
 <use my_folder/images/uml6.png>
 Package pdftex.def Info: my_folder/images/uml6.png  used on input line 24.
@@ -3924,7 +3925,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
 
 [19.19 <./my_folder/images/uml6.png>]
-<my_folder/images/uml7.png, id=197, 727.21687pt x 861.2175pt>
+<my_folder/images/uml7.png, id=200, 727.21687pt x 861.2175pt>
 File: my_folder/images/uml7.png Graphic file (type png)
 <use my_folder/images/uml7.png>
 Package pdftex.def Info: my_folder/images/uml7.png  used on input line 30.
@@ -3970,11 +3971,11 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 3.
 
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/MIddleware/MiddlewarePipeline/
-MiddlewarePipeline.h
+(../../src/CQRS/MIddleware/MiddlewarePipeline/MiddlewarePipeline.h
 LaTeX Font Info:    Font shape `T2A/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T2A/cmtt/m/n' tried instead on input line 5.
-) (/Users/nikitakaralyus/developer/FileWizard/CQRS/Alias.h
+)
+(../../src/CQRS/Alias.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -3986,9 +3987,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
 
 [22.22
 
-])
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IRequestHandler.h
-) (/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IResponse.h
+]) (../../src/CQRS/Abstractions/IRequestHandler.h)
+(../../src/CQRS/Abstractions/IResponse.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -3998,9 +3998,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[23.23])
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IRequestRouter.h)
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IMiddleware.h)
+[23.23]) (../../src/CQRS/Abstractions/IRequestRouter.h)
+(../../src/CQRS/Abstractions/IMiddleware.h)
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4010,11 +4009,9 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[24.24]
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IRequest.h)
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IStringFormattabl
-e.h)
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Abstractions/IRequestSender.h
+[24.24] (../../src/CQRS/Abstractions/IRequest.h)
+(../../src/CQRS/Abstractions/IStringFormattable.h)
+(../../src/CQRS/Abstractions/IRequestSender.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4024,11 +4021,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[25.25])
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Services/RequestHandler/Reques
-tHandler.h)
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Services/RequestSender/Request
-Sender.h
+[25.25]) (../../src/CQRS/Services/RequestHandler/RequestHandler.h)
+(../../src/CQRS/Services/RequestSender/RequestSender.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4038,9 +4032,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[26.26])
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Models/DirectoryEntry/Di
-rectoryEntry.h
+[26.26]) (../../src/FileSystem/Models/DirectoryEntry/DirectoryEntry.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4050,11 +4042,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[27.27])
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Models/FileEntry/FileEnt
-ry.h)
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Exceptions/FileNotFoundE
-xception.h
+[27.27]) (../../src/FileSystem/Models/FileEntry/FileEntry.h)
+(../../src/FileSystem/Exceptions/FileNotFoundException.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4064,11 +4053,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[28.28])
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Exceptions/InvalidFormat
-Exception.h)
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Exceptions/ApplicationEx
-ception.h
+[28.28]) (../../src/FileSystem/Exceptions/InvalidFormatException.h)
+(../../src/FileSystem/Exceptions/ApplicationException.h)
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4078,11 +4064,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[29.29])
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Exceptions/DirectoryNotF
-oundException.h)
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Abstractions/IFileSystem
-Entry.h
+[29.29] (../../src/FileSystem/Exceptions/DirectoryNotFoundException.h)
+(../../src/FileSystem/Abstractions/IFileSystemEntry.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4093,10 +4076,12 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
 
 [30.30])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Middleware/ConsoleLo
-ggerMiddleware/ConsoleLoggerMiddleware.h)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Middleware/Exception
-HandlingMiddleware/ExceptionHandlingMiddleware.h)
+(../../src/Infrastructure/Middleware/ConsoleLoggerMiddleware/ConsoleLoggerMiddl
+eware.h)
+(../../src/Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandl
+ingMiddleware.h)
+(../../src/Infrastructure/Middleware/FileLoggerMiddleware/FileLoggerMiddleware.
+h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4106,11 +4091,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[31.31]
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Middleware/FileLogge
-rMiddleware/FileLoggerMiddleware.h)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Middleware/LoggerMid
-dleware/LoggerMiddleware.h
+[31.31])
+(../../src/Infrastructure/Middleware/LoggerMiddleware/LoggerMiddleware.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4120,11 +4102,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[32.32])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/ApplicationBuilder/A
-pplicationBuilder.h)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Abstractions/ILogger
-.h
+[32.32]) (../../src/Infrastructure/ApplicationBuilder/ApplicationBuilder.h)
+(../../src/Infrastructure/Abstractions/ILogger.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4134,11 +4113,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[33.33])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Abstractions/IUserIn
-teractor.h)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Application/Applicat
-ion.h
+[33.33]) (../../src/Infrastructure/Abstractions/IUserInteractor.h)
+(../../src/Infrastructure/Application/Application.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4148,11 +4124,9 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[34.34])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/ConsoleLogg
-er/ConsoleLogger.h)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/ConsoleUser
-Interactor/ConsoleUserInteractor.h
+[34.34]) (../../src/Infrastructure/Services/ConsoleLogger/ConsoleLogger.h)
+(../../src/Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.
+h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4163,8 +4137,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
 
 [35.35])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/Application
-RequestRouter/ApplicationRequestRouter.h
+(../../src/Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestR
+outer.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4174,11 +4148,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[36.36])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/FileLogger/
-FileLogger.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/NewestFiles/NewestFilesReq
-uestHandler.h
+[36.36]) (../../src/Infrastructure/Services/FileLogger/FileLogger.h)
+(../../src/Features/NewestFiles/NewestFilesRequestHandler.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4188,9 +4159,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[37.37])
-(/Users/nikitakaralyus/developer/FileWizard/Features/NewestFiles/NewestFilesReq
-uest.h
+[37.37]) (../../src/Features/NewestFiles/NewestFilesRequest.h)
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4200,9 +4169,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[38.38])
-(/Users/nikitakaralyus/developer/FileWizard/Features/NewestFiles/NewestFilesRes
-ponse.h
+[38.38] (../../src/Features/NewestFiles/NewestFilesResponse.h)
+(../../src/Features/CountTotalSize/CountTotalSizeRequest.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4212,11 +4180,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[39.39])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountTotalSize/CountTotalS
-izeRequest.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountTotalSize/CountTotalS
-izeRequestHandler.h
+[39.39]) (../../src/Features/CountTotalSize/CountTotalSizeRequestHandler.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4226,9 +4190,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[40.40])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountTotalSize/CountTotalS
-izeResponse.h
+[40.40]) (../../src/Features/CountTotalSize/CountTotalSizeResponse.h)
+(../../src/Features/Common/FilesRequest.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4238,8 +4201,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[41.41])
-(/Users/nikitakaralyus/developer/FileWizard/Features/Common/FilesRequest.h
+[41.41]) (../../src/Features/Common/FilesRequestHandler.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4249,9 +4211,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[42.42])
-(/Users/nikitakaralyus/developer/FileWizard/Features/Common/FilesRequestHandler
-.h
+[42.42]
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4261,8 +4221,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[43.43])
-(/Users/nikitakaralyus/developer/FileWizard/Features/Exit/ExitRequestHandler.h
+[43.43]) (../../src/Features/Exit/ExitRequestHandler.h)
+(../../src/Features/Exit/ExitResponse.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4272,9 +4232,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[44.44])
-(/Users/nikitakaralyus/developer/FileWizard/Features/Exit/ExitResponse.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/Exit/ExitRequest.h
+[44.44]) (../../src/Features/Exit/ExitRequest.h)
+(../../src/Features/LargestFiles/LargestFilesResponse.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4284,9 +4243,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[45.45])
-(/Users/nikitakaralyus/developer/FileWizard/Features/LargestFiles/LargestFilesR
-esponse.h
+[45.45]) (../../src/Features/LargestFiles/LargestFilesRequestHandler.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4296,11 +4253,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[46.46])
-(/Users/nikitakaralyus/developer/FileWizard/Features/LargestFiles/LargestFilesR
-equestHandler.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/LargestFiles/LargestFilesR
-equest.h
+[46.46]) (../../src/Features/LargestFiles/LargestFilesRequest.h)
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4310,9 +4263,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[47.47])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountDirectories/CountDire
-ctoriesRequest.h
+[47.47] (../../src/Features/CountDirectories/CountDirectoriesRequest.h)
+(../../src/Features/CountDirectories/CountDirectoriesResponse.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4322,11 +4274,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[48.48])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountDirectories/CountDire
-ctoriesResponse.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountDirectories/CountDire
-ctoriesRequestHandler.h
+[48.48]) (../../src/Features/CountDirectories/CountDirectoriesRequestHandler.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4336,9 +4284,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[49.49])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountFiles/CountFilesRespo
-nse.h
+[49.49]) (../../src/Features/CountFiles/CountFilesResponse.h)
+(../../src/Features/CountFiles/CountFilesRequest.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4348,11 +4295,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[50.50])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountFiles/CountFilesReque
-st.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountFiles/CountFilesReque
-stHandler.h
+[50.50]) (../../src/Features/CountFiles/CountFilesRequestHandler.h)
+(../../src/Features/FindDuplicates/FindDuplicatesRequestHandler.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4362,9 +4306,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[51.51])
-(/Users/nikitakaralyus/developer/FileWizard/Features/FindDuplicates/FindDuplica
-tesRequestHandler.h
+[51.51]) (../../src/Features/FindDuplicates/FindDuplicatesResponse.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4374,9 +4316,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[52.52])
-(/Users/nikitakaralyus/developer/FileWizard/Features/FindDuplicates/FindDuplica
-tesResponse.h
+[52.52]) (../../src/Features/FindDuplicates/FindDuplicatesRequest.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4386,11 +4326,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[53.53])
-(/Users/nikitakaralyus/developer/FileWizard/Features/FindDuplicates/FindDuplica
-tesRequest.h)
-(/Users/nikitakaralyus/developer/FileWizard/Features/Exception/ExceptionRequest
-Handler.h
+[53.53]) (../../src/Features/Exception/ExceptionRequestHandler.h)
+(../../src/Features/Exception/ExceptionResponse.h
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4400,9 +4337,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[54.54])
-(/Users/nikitakaralyus/developer/FileWizard/Features/Exception/ExceptionRespons
-e.h
+[54.54]) (../../src/Features/Exception/ExpcetionRequest.h)
+(../../src/CQRS/MIddleware/MiddlewarePipeline/MiddlewarePipeline.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4412,11 +4348,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[55.55])
-(/Users/nikitakaralyus/developer/FileWizard/Features/Exception/ExpcetionRequest
-.h)
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/MIddleware/MiddlewarePipeline/
-MiddlewarePipeline.cpp
+[55.55]) (../../src/CQRS/Services/RequestHandler/RequestHandler.cpp)
+(../../src/CQRS/Services/RequestSender/RequestSender.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4426,13 +4359,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[56.56])
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Services/RequestHandler/Reques
-tHandler.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/CQRS/Services/RequestSender/Request
-Sender.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/Features/NewestFiles/NewestFilesReq
-uestHandler.cpp
+[56.56]) (../../src/Features/NewestFiles/NewestFilesRequestHandler.cpp)
+(../../src/Features/CountTotalSize/CountTotalSizeRequestHandler.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4442,9 +4370,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[57.57])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountTotalSize/CountTotalS
-izeRequestHandler.cpp
+[57.57]) (../../src/Features/LargestFiles/LargestFilesRequestHandler.cpp)
+(../../src/Features/CountDirectories/CountDirectoriesRequestHandler.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4454,11 +4381,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[58.58])
-(/Users/nikitakaralyus/developer/FileWizard/Features/LargestFiles/LargestFilesR
-equestHandler.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountDirectories/CountDire
-ctoriesRequestHandler.cpp
+[58.58]) (../../src/Features/CountFiles/CountFilesRequestHandler.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4468,9 +4391,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[59.59])
-(/Users/nikitakaralyus/developer/FileWizard/Features/CountFiles/CountFilesReque
-stHandler.cpp
+[59.59]) (../../src/Features/FindDuplicates/FindDuplicatesRequestHandler.cpp)
+(../../src/FileSystem/Models/DirectoryEntry/DirectoryEntry.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4480,11 +4402,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[60.60])
-(/Users/nikitakaralyus/developer/FileWizard/Features/FindDuplicates/FindDuplica
-tesRequestHandler.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Models/DirectoryEntry/Di
-rectoryEntry.cpp
+[60.60]
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4494,7 +4412,9 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[61.61]
+[61.61]) (../../src/FileSystem/Models/FileEntry/FileEntry.cpp)
+(../../src/Infrastructure/Middleware/ExceptionHandlingMiddleware/ExceptionHandl
+ingMiddleware.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4505,10 +4425,8 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
 
 [62.62])
-(/Users/nikitakaralyus/developer/FileWizard/FileSystem/Models/FileEntry/FileEnt
-ry.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Middleware/Exception
-HandlingMiddleware/ExceptionHandlingMiddleware.cpp
+(../../src/Infrastructure/Middleware/LoggerMiddleware/LoggerMiddleware.cpp)
+(../../src/Infrastructure/ApplicationBuilder/ApplicationBuilder.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4518,11 +4436,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[63.63])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Middleware/LoggerMid
-dleware/LoggerMiddleware.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/ApplicationBuilder/A
-pplicationBuilder.cpp
+[63.63]) (../../src/Infrastructure/Application/Application.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4532,9 +4446,9 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[64.64])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Application/Applicat
-ion.cpp
+[64.64]) (../../src/Infrastructure/Services/ConsoleLogger/ConsoleLogger.cpp)
+(../../src/Infrastructure/Services/ConsoleUserInteractor/ConsoleUserInteractor.
+cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4544,11 +4458,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[65.65])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/ConsoleLogg
-er/ConsoleLogger.cpp)
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/ConsoleUser
-Interactor/ConsoleUserInteractor.cpp
+[65.65]
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4588,7 +4498,9 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[69.69]
+[69.69])
+(../../src/Infrastructure/Services/ApplicationRequestRouter/ApplicationRequestR
+outer.cpp
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4598,9 +4510,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[70.70])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/Application
-RequestRouter/ApplicationRequestRouter.cpp
+[70.70]
 Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
@@ -4610,19 +4520,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[71.71])
-(/Users/nikitakaralyus/developer/FileWizard/Infrastructure/Services/FileLogger/
-FileLogger.cpp
-Overfull \hbox (2.10788pt too wide) has occurred while \output is active
- []
- []
-
-
-Overfull \hbox (2.10788pt too wide) has occurred while \output is active
- []
- []
-
-[72.72]))
+[71.71]) (../../src/Infrastructure/Services/FileLogger/FileLogger.cpp))
 
 Package nag Warning: Unmatched ``\center'' command on line 43.
 
@@ -4681,7 +4579,7 @@ Overfull \hbox (2.10788pt too wide) has occurred while \output is active
  []
  []
 
-[73.73]
+[72.72]
 \tf@toc=\write9
 \openout9 = `My_thesis.toc'.
 
@@ -4691,23 +4589,17 @@ Package cleveref Info: loaded `russian' language definitions on input line 23.
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package rerunfilecheck Warning: File `My_thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `My_thesis.out':
-(rerunfilecheck)             Before: 00EA4EFCAE775617C9EB562565C1FC2F;1729
-(rerunfilecheck)             After:  A9DADA6A570F3762108ABC464B4998DE;2007.
+Package rerunfilecheck Info: File `My_thesis.out' has not changed.
+(rerunfilecheck)             Checksum: A9DADA6A570F3762108ABC464B4998DE;2007.
 Package logreq Info: Writing requests to 'My_thesis.run.xml'.
 \openout1 = `My_thesis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50727 strings out of 476025
- 908182 string characters out of 5790016
- 2275863 words of memory out of 5000000
- 67605 multiletter control sequences out of 15000+600000
+ 50692 strings out of 476025
+ 896772 string characters out of 5790016
+ 2257460 words of memory out of 5000000
+ 67606 multiletter control sequences out of 15000+600000
  573326 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,123p,1422b,3195s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4718,10 +4610,10 @@ gular.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfit1
 200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt120
 0.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1440.
 pfb>
-Output written on My_thesis.pdf (73 pages, 1225320 bytes).
+Output written on My_thesis.pdf (72 pages, 1222755 bytes).
 PDF statistics:
- 3159 PDF objects out of 3580 (max. 8388607)
- 3034 compressed objects within 31 object streams
- 2334 named destinations out of 2487 (max. 500000)
- 24172 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 3113 PDF objects out of 3580 (max. 8388607)
+ 2990 compressed objects within 30 object streams
+ 2298 named destinations out of 2487 (max. 500000)
+ 24180 words of extra memory for PDF output out of 24883 (max. 10000000)
 
